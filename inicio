@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Los Bravos del Sabor</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo-nav">
+LOS BRAVOS DEL SABOR
+</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#eventos">Eventos</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="inicio">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<img src="images/logo.png" class="logo">
+
+<h1>LOS BRAVOS DEL SABOR</h1>
+
+<h2>¡BRAOO PERO CON SABOR!</h2>
+
+<p>
+Agrupación Tropical Ranchera dedicada a llevar
+alegría, energía y buena música a cada escenario.
+</p>
+
+<a href="#contacto" class="btn-gold">
+CONTRATACIONES
+</a>
+
+</div>
+
+</section>
+
+<section class="section reveal" id="eventos">
+
+<h2>🎤 Próximos Eventos</h2>
+
+<div class="event-card">
+
+<h3>28 de Junio</h3>
+
+<p>Lago Rapel</p>
+
+<p>
+Síguenos en nuestras redes para conocer
+nuevas fechas y presentaciones.
+</p>
+
+</div>
+
+</section>
+
+<section class="section reveal" id="galeria">
+
+<h2>📸 Galería</h2>
+
+<div class="gallery">
+
+<img src="images/foto1.jpg" onclick="openLightbox(this.src)">
+<img src="images/foto2.jpg" onclick="openLightbox(this.src)">
+<img src="images/foto3.jpg" onclick="openLightbox(this.src)">
+
+</div>
+
+</section>
+
+<section class="section reveal" id="videos">
+
+<h2>🎬 Videos</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID"
+title="YouTube video player"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<section class="section reveal" id="contacto">
+
+<h2>📞 Contrataciones</h2>
+
+<p class="contact-text">
+
+Fiestas Costumbristas<br>
+Festivales<br>
+Eventos Municipales<br>
+Matrimonios<br>
+Cumpleaños<br>
+Eventos Corporativos<br>
+Celebraciones Privadas
+
+</p>
+
+<a href="https://wa.me/56941585397"
+class="btn-whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
++56 9 4158 5397
+
+</a>
+
+</section>
+
+<section class="section reveal">
+
+<h2>🌐 Redes Sociales</h2>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/losbravosdelsaboroficial" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.tiktok.com/@losbravosdelsabor" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+
+<a href="https://www.youtube.com/@losbravosdelsabor" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<img src="images/logo.jpeg">
+
+<p>© 2025 Los Bravos del Sabor</p>
+
+<p>¡BRAOO PERO CON SABOR!</p>
+
+</footer>
+
+<div id="lightbox">
+<span onclick="closeLightbox()">×</span>
+<img id="lightbox-img">
+</div>
+
+<a href="https://wa.me/56941585397"
+class="floating-whatsapp"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
