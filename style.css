@@ -36,7 +36,7 @@ text-decoration:none;
 }
 
 .logo-nav{
-color:#d4a017;
+color:#d4a017
 font-weight:700;
 }
 
@@ -48,28 +48,31 @@ rgba(0,0,0,.8)),
 url('images/hero.jpg');
 background-size:cover;
 background-position:center;
-display:flex;
+display:flex; 
 justify-content:center;
 align-items:center;
 text-align:center;
 }
 
 .hero-content{
-max-width:900px;
-padding:20px;
-animation:fadeUp 1.5s ease;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
 }
 
 .logo{
-width:320px;
-max-width:120%;
+    width: 120px;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
-.hero h1{
-font-family:Cinzel;
-font-size:5rem;
-color:#d4a017;
-text-shadow:0 0 25px gold;
+.hero-content h1{
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
 }
 
 .hero h2{
