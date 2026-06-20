@@ -132,7 +132,34 @@ border:3px solid #d4a017;
 .gallery img:hover{
 transform:scale(1.05);
 }
+.music-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 
+.music-btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.spotify {
+    background: #1DB954;
+}
+
+.apple {
+    background: #000000;
+}
+
+.music-btn:hover {
+    transform: scale(1.05);
+}
 .video-container{
 max-width:900px;
 margin:auto;
