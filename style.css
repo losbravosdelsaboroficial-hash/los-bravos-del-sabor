@@ -269,3 +269,23 @@ opacity:1;
 transform:none;
 }
 }
+@media (max-width:768px){
+
+    nav ul{
+        display:flex;
+        overflow-x:auto;
+        white-space:nowrap;
+        gap:20px;
+        padding:10px;
+        scrollbar-width:none;
+    }
+
+    nav ul::-webkit-scrollbar{
+        display:none;
+    }
+
+    nav ul li{
+        flex:none;
+    }
+
+}
