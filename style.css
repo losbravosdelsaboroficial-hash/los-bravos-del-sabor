@@ -321,3 +321,23 @@ footer img{
     }
 }
 
+.email-contacto{
+    margin-top:20px;
+    text-align:center;
+    font-size:18px;
+}
+
+.email-contacto i{
+    color:#d4af37;
+    margin-right:8px;
+}
+
+.email-contacto a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.email-contacto a:hover{
+    color:#d4af37;
+}
