@@ -283,9 +283,9 @@ footer img{
 /* INTEGRANTES */
 
 #integrantes .members{
-    display:grid !important;
-    grid-template-columns:repeat(3, 1fr) !important;
-    gap:25px !important;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
     max-width:1400px;
     margin:40px auto;
 }
@@ -296,7 +296,6 @@ footer img{
     border-radius:15px;
     padding:20px;
     text-align:center;
-    box-sizing:border-box;
 }
 
 #integrantes .member-card img{
@@ -305,20 +304,17 @@ footer img{
     object-fit:cover;
     border-radius:50%;
     border:4px solid #d4af37;
-    display:block;
-    margin:0 auto 15px;
 }
 
-@media (max-width: 900px){
+@media(max-width:900px){
     #integrantes .members{
-        grid-template-columns:repeat(2,1fr) !important;
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
-@media (max-width: 600px){
+@media(max-width:600px){
     #integrantes .members{
-        grid-template-columns:1fr !important;
+        grid-template-columns:1fr;
     }
 }
-
 
