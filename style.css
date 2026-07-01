@@ -318,3 +318,18 @@ footer img{
     }
 }
 
+.btn-dossier{
+    display:inline-block;
+    background:#c62828;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-dossier:hover{
+    background:#9e1f1f;
+    transform:translateY(-2px);
+}
