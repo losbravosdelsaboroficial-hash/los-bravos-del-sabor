@@ -371,7 +371,7 @@ footer img{
     background:#9e1f1f;
     transform:translateY(-2px);
 }
-#contador-evento{
+.contador-evento{
     margin:15px 0;
     font-size:1.2rem;
     font-weight:bold;
