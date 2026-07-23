@@ -1,29 +1,24 @@
-function openLightbox(src){
-
-document.getElementById("lightbox").style.display="flex";
-
-document.getElementById("lightbox-img").src=src;
-
+function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
 }
 
-function closeLightbox(){
-
-document.getElementById("lightbox").style.display="none";
-
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
 }
 
-window.addEventListener("scroll",()=>{
+// Animación al hacer scroll
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".reveal").forEach(el => {
+        const top = el.getBoundingClientRect().top;
 
-document.querySelectorAll(".reveal").forEach(el=>{
+        if (top < window.innerHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+});
 
-const top=el.getBoundingClientRect().top;
-
-if(top<window.innerHeight-100){
-
-el.classList.add("active");
-
-}
-  // Ocultar eventos vencidos automáticamente
+// Contador de eventos
 document.addEventListener("DOMContentLoaded", () => {
 
     const hoy = new Date();
@@ -37,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const diferencia = fechaEvento - hoy;
         const dias = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
 
-        const contador = evento.querySelector("#contador-evento");
+        const contador = evento.querySelector(".contador-evento");
 
         if (dias > 0) {
             contador.innerHTML = `⏳ Faltan <strong>${dias}</strong> días`;
@@ -48,9 +43,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
-
-});
-
-});
 
 });
