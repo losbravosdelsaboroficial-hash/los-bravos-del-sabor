@@ -469,3 +469,36 @@ footer img{
     font-weight:bold;
     color:#D4AF37;
 }
+@media(max-width:768px){
+
+.hero{
+
+height:90vh;
+
+}
+
+.hero-logo{
+
+width:150px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero h2{
+
+font-size:20px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+}
