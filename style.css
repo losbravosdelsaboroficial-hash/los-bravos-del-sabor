@@ -77,17 +77,9 @@ rgba(0,0,0,.85),
     position:relative;
     z-index:2;
     max-width:900px;
-    padding-top:330px;
-    padding-left:20px;
-    padding-right:20px;
-    padding-bottom:40px;
+    padding:40px 20px;
+    margin-top:220px;
 
-}
-
-.hero-logo{
-    width:170px;
-    margin-bottom:20px;
-    filter:drop-shadow(0 0 20px rgba(212,160,23,.5));
 
 }
 
