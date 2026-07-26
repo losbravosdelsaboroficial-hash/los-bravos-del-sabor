@@ -6,12 +6,32 @@
 
 body{
     font-family:'Montserrat',sans-serif;
-    background:url("images/fodo-pagina.jpg") center center fixed;
-    background-size:cover;
-    background-repeat:no-repeat;
+    background:#000;
     color:#fff;
     overflow-x:hidden;
 }
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("images/fodo-pagina.jpg") center center/cover no-repeat;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.20); /* Solo un 20% de oscuridad */
+    z-index:-1;
+
 }
 
 /* MENU */
