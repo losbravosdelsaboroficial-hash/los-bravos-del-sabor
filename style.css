@@ -521,47 +521,72 @@ font-size:16px;
 
 }
 
+/* CONTADOR */
 
 .contador-evento{
+    margin:40px auto;
     text-align:center;
-    margin:30px auto;
 }
 
 .contador-evento h3{
-    color:#d4a017;
-    margin-bottom:15px;
+    color:#d4af37;
+    margin-bottom:20px;
+    font-size:1.5rem;
 }
 
-#contador{
-    font-size:2rem;
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    background:#111;
+    border:2px solid #d4af37;
+    border-radius:15px;
+    width:110px;
+    padding:20px 10px;
+    box-shadow:0 0 20px rgba(212,175,55,.3);
+    transition:.3s;
+}
+
+.time-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(212,175,55,.7);
+}
+
+.time-box span{
+    display:block;
+    font-size:2.5rem;
     font-weight:bold;
-    color:#fff;
-    letter-spacing:2px;
+    color:#d4af37;
 }
-// Fecha del próximo evento
-const fechaEvento = new Date("2026-08-08T21:00:00").getTime();
 
-const contador = document.getElementById("contador");
+.time-box small{
+    color:#fff;
+    font-size:1rem;
+}
 
-function actualizarContador() {
+@media(max-width:768px){
 
-    const ahora = new Date().getTime();
-    const diferencia = fechaEvento - ahora;
-
-    if (diferencia <= 0) {
-        contador.innerHTML = "🎉 ¡Hoy es el gran evento!";
-        return;
+    .time-box{
+        width:75px;
+        padding:15px 5px;
     }
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+    .time-box span{
+        font-size:1.7rem;
+    }
 
-    contador.innerHTML =
-        `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    .time-box small{
+        font-size:.8rem;
+    }
+
 }
 
 actualizarContador();
 setInterval(actualizarContador, 1000);    
 }
+}
+    
