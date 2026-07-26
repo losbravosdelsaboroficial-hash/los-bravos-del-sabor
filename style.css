@@ -505,9 +505,9 @@ font-size:16px;
     background:#f0b92c;
     transform:scale(1.05);
 }
-.event-image{
-    width:100%;
-    max-width:350px;
+event-image{
+    width:300px !important;
+    height:auto !important;
     display:block;
     margin:20px auto;
     border-radius:15px;
