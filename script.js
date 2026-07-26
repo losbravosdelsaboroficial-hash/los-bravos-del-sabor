@@ -19,7 +19,8 @@ window.addEventListener("scroll", () => {
 });
 
 const fechaEvento = new Date("2026-08-08T21:00:00").getTime();
-
+console.log("Fecha del evento:", new Date(fechaEvento));
+console.log("Ahora:", new Date());
 function actualizarContador(){
 
     const ahora = new Date().getTime();
@@ -49,3 +50,4 @@ function actualizarContador(){
 
 actualizarContador();
 setInterval(actualizarContador,1000);
+console.log("Diferencia:", diferencia);
