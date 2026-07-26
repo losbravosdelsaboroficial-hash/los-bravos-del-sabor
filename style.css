@@ -389,12 +389,16 @@ footer img{
 }
 /* INTEGRANTES */
 
-#integrantes .members{
+.members{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    max-width:1400px;
-    margin:40px auto;
+    grid-template-columns:repeat(3, 1fr);
+    justify-items:center;
+    gap:30px;
+}
+
+.member-card{
+    text-align:center;
+    width:300px;
 }
 
 #integrantes .member-card{
