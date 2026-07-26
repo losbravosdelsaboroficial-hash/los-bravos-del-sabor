@@ -457,6 +457,37 @@ footer img{
     font-weight:bold;
     color:#D4AF37;
 }
+.event-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#d4a017;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:all .3s ease;
+}
+
+.event-btn:hover{
+    background:#f0b92c;
+    transform:scale(1.05);
+}
+.event-image{
+    width:50px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:20px auto;
+    border-radius:15px;
+}
+
+.event-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
 @media(max-width:768px){
 
 .hero{
@@ -489,34 +520,4 @@ font-size:16px;
 
 }
 
-.event-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#d4a017;
-    color:#fff;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:all .3s ease;
-}
 
-.event-btn:hover{
-    background:#f0b92c;
-    transform:scale(1.05);
-}
-.event-image{
-    width:50px;
-    max-width:100%;
-    height:auto;
-    display:block;
-    margin:20px auto;
-    border-radius:15px;
-}
-
-.event-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
