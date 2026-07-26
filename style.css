@@ -399,9 +399,10 @@ footer img{
 
 .members{
     display:grid;
-    grid-template-columns:repeat(3, minmax(280px, 300px));
+    grid-template-columns:repeat(3, 300px);
     justify-content:center;
     gap:40px;
+}
 }
 
 .member-card{
