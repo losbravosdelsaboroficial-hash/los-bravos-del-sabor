@@ -521,4 +521,47 @@ font-size:16px;
 
 }
 
+
+.contador-evento{
+    text-align:center;
+    margin:30px auto;
+}
+
+.contador-evento h3{
+    color:#d4a017;
+    margin-bottom:15px;
+}
+
+#contador{
+    font-size:2rem;
+    font-weight:bold;
+    color:#fff;
+    letter-spacing:2px;
+}
+// Fecha del próximo evento
+const fechaEvento = new Date("2026-08-08T21:00:00").getTime();
+
+const contador = document.getElementById("contador");
+
+function actualizarContador() {
+
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
+
+    if (diferencia <= 0) {
+        contador.innerHTML = "🎉 ¡Hoy es el gran evento!";
+        return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    contador.innerHTML =
+        `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+}
+
+actualizarContador();
+setInterval(actualizarContador, 1000);    
 }
