@@ -388,26 +388,28 @@ footer img{
 /* INTEGRANTES */
 
 #integrantes{
+    width:100%;
     padding:80px 20px;
     text-align:center;
 }
 
 #integrantes h2{
-    text-align:center;
     margin-bottom:40px;
 }
 
 .members{
+    width:100%;
     display:grid;
     grid-template-columns:repeat(3, 300px);
     justify-content:center;
+    align-items:start;
     gap:40px;
-}
 }
 
 .member-card{
-    text-align:center;
     width:300px;
+    text-align:center;
+    margin:0 auto;
 }
 
 /* INTEGRANTES RESPONSIVE */
