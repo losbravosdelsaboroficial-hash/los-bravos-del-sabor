@@ -18,30 +18,34 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Contador de eventos
-document.addEventListener("DOMContentLoaded", () => {
+const fechaEvento = new Date("2026-08-08T21:00:00").getTime();
 
-    const hoy = new Date();
-    hoy.setHours(0, 0, 0, 0);
+function actualizarContador(){
 
-    document.querySelectorAll(".event-card").forEach(evento => {
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
 
-        const fechaEvento = new Date(evento.dataset.fecha);
-        fechaEvento.setHours(0, 0, 0, 0);
+    if(diferencia <= 0){
 
-        const diferencia = fechaEvento - hoy;
-        const dias = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
+        document.getElementById("dias").textContent="00";
+        document.getElementById("horas").textContent="00";
+        document.getElementById("minutos").textContent="00";
+        document.getElementById("segundos").textContent="00";
 
-        const contador = evento.querySelector(".contador-evento");
+        return;
+    }
 
-        if (dias > 0) {
-            contador.innerHTML = `⏳ Faltan <strong>${dias}</strong> días`;
-        } else if (dias === 0) {
-            contador.innerHTML = "🔥 <strong>¡El evento es hoy!</strong>";
-        } else {
-            contador.innerHTML = "✅ Evento realizado";
-        }
+    const dias=Math.floor(diferencia/(1000*60*60*24));
+    const horas=Math.floor((diferencia%(1000*60*60*24))/(1000*60*60));
+    const minutos=Math.floor((diferencia%(1000*60*60))/(1000*60));
+    const segundos=Math.floor((diferencia%(1000*60))/1000);
 
-    });
+    document.getElementById("dias").textContent=dias;
+    document.getElementById("horas").textContent=horas;
+    document.getElementById("minutos").textContent=minutos;
+    document.getElementById("segundos").textContent=segundos;
 
-});
+}
+
+actualizarContador();
+setInterval(actualizarContador,1000);
