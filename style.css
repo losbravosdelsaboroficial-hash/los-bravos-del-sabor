@@ -584,9 +584,4 @@ font-size:16px;
     }
 
 }
-
-actualizarContador();
-setInterval(actualizarContador, 1000);    
-}
-}
     
