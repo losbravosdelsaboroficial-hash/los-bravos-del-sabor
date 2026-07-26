@@ -208,9 +208,12 @@ animation:float 2s infinite;
 /* SECCIONES */
 
 .section{
+  .section{
     padding:80px 20px;
     text-align:center;
-}
+    background:rgba(0,0,0,.15);
+    backdrop-filter:blur(2px);
+} 
 
 .section h2{
     color:#d4a017;
