@@ -474,12 +474,13 @@ footer img{
     transform:scale(1.05);
 }
 .event-image{
-    width:50px;
+    width:320px;
     max-width:100%;
     height:auto;
     display:block;
     margin:20px auto;
     border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
 }
 
 .event-buttons{
@@ -520,4 +521,4 @@ font-size:16px;
 
 }
 
-
+}
