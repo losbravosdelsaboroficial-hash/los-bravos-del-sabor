@@ -1,360 +1,511 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <head>
- <!-- Etiquetas para que Facebook muestre la imagen -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Los Bravos Del Sabor" />
-<meta property="og:description" content="¡Ya está disponible nuestra página web oficial! Conoce nuestra historia, integrantes, dossier artístico, fotos, videos y contrataciones." />
-<meta property="og:url" content="https://www.losbravosdelsabor.cl" />
-<meta property="og:image" content="https://www.losbravosdelsabor.cl/images/portada.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Los Bravos Del Sabor">
+<meta property="og:description" content="¡Ya está disponible nuestra página web oficial! Conoce nuestra historia, integrantes, dossier artístico, fotos, videos y contrataciones.">
+<meta property="og:url" content="https://www.losbravosdelsabor.cl">
+<meta property="og:image" content="https://www.losbravosdelsabor.cl/images/portada.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://losbravosdelsaboroficial-hash.github.io/los-bravos-del-sabor/images/preview.jpg">
+
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome -->
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
+
 <body>
+
+<!-- ================================
+     MENÚ
+================================ -->
 
 <nav>
 
-<div class="logo-nav">
+    <div class="logo-nav"></div>
 
-</div>
-
-<ul>
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#integrantes">Integrantes</a></li>    
-<li><a href="#eventos">Eventos</a></li>
-<li><a href="#galeria">Galería</a></li>
-<li><a href="#musica">Música</a></li>
-<li><a href="#videos">Videos</a></li>
-<li><a href="#contacto">Contacto</a></li>
-</ul>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#integrantes">Integrantes</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#musica">Música</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
 
 </nav>
 
+
+<!-- ================================
+     INICIO
+================================ -->
+
 <section class="hero" id="inicio">
 
-<div class="hero-overlay"></div>
+    <div class="hero-overlay"></div>
 
-<div class="hero-content">
+    <div class="hero-content">
 
+        <h1>LOS BRAVOS DEL SABOR</h1>
 
-<h1>LOS BRAVOS DEL SABOR</h1>
+        <h2>¡BRAOO PERO CON SABOR!</h2>
 
-<h2>¡BRAOO PERO CON SABOR!</h2>
+        <p>
+            Agrupación Tropical Ranchera dedicada a llevar alegría,
+            energía y buena música a cada escenario de Chile.
+        </p>
 
-<p>
-Agrupación Tropical Ranchera dedicada a llevar alegría,
-energía y buena música a cada escenario de Chile.
-</p>
+        <div class="hero-buttons">
 
-<div class="hero-buttons">
+            <a href="#contacto" class="btn-gold">
+                Contrataciones
+            </a>
 
-<a href="#contacto" class="btn-gold">
-Contrataciones
-</a>
+            <a href="pdf/Dossier-Los-bravos-del-sabor.pdf"
+               class="btn-dossier"
+               download>
+                Descargar Dossier
+            </a>
 
-<a href="pdf/Dossier-Los-bravos-del-sabor.pdf"
-class="btn-dossier"
-download>
+        </div>
 
-Descargar Dossier
+        <a href="#integrantes" class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
 
-</a>
-
-</div>
-
-<a href="#integrantes" class="scroll-down">
-
-<i class="fa-solid fa-chevron-down"></i>
-
-</a>
-
-</div>
+    </div>
 
 </section>
+
+
+<!-- ================================
+     INTEGRANTES
+================================ -->
+
 <section class="section reveal" id="integrantes">
- <h2>Integrantes</h2>
 
-<div class="members">
-<div class="member-card">
-<img src="images/alejandro-machuca.png" alt="Alejandro Machuca">
-<h3>Alejandro Machuca</h3>
-<p><strong>Baterista</strong></p>
-<p>Desde la comuna de San Vicente de Tagua Tagua,
- llega el encargado de marcar el ritmo y la energía
- en cada presentación. Con talento, pasión
- y una gran dedicación a la música tropical,
- Alejandro es el baterista que mantiene vivo el pulso de
- Los Bravos del Sabor.</p>
-</div>
+    <h2>Integrantes</h2>
 
-<div class="member-card">
-<img src="images/juan-pardo.png" alt="Juan Pardo">
-<h3>Juan Pardo "El Diablo Chico"</h3>
-<p><strong>Animador</strong></p>
-<p>Desde la localidad de Zuñiga,
-es el animador oficial
-de Los Bravos del Sabor.
-Con su energía y carisma,
-transforma cada presentación en
-una experiencia llena de alegría
-y cercanía con el público.</p>
-</div>
- 
-<div class="member-card">
-<img src="images/fernando-marilao.png" alt="Fernando Marilao">
-<h3>Fernando Marilao</h3>
-<p><strong>Cantante</strong></p>
-<p>Vocalista de San Vicente de Tagua Tagua,
-posee una voz potente y una gran
-capacidad interpretativa,
-siendo el encargado
-de transmitir toda la emoción
-de cada canción.</p>
-</div>
- 
- <div class="member-card">
- <img src="images/juan-romero.png" alt="Juan Romero">
-<h3>Juan Romero "El Mistiko"</h3>
-<p><strong>Guitarrista</strong></p>
-<p>Desde Quinta de Tilcoco,
-es el guitarrista de la agrupación.
-Su talento, creatividad y pasión
-por la música aportan la esencia
-y el carácter que distinguen
-el sonido de la banda.</p>
-</div>
+    <div class="members">
 
-<div class="member-card">
-<img src="images/luis-caro.png" alt="Luis Caro">
-<h3>Luis Caro</h3>
-<p><strong>Acordeonista</strong></p>
-<p>Desde la comuna de Coinco, 
- llega el talento que pone sentimiento,
- alegría y tradición en cada melodía.
- Con su acordeón, LuchitoCaro aporta ese sonido inconfundible
- que hace vibrar al público y le da identidad a cada
- presentación de Los Bravos del Sabor.</p>
-</div>
+        <div class="member-card">
+            <img src="images/alejandro-machuca.png" alt="Alejandro Machuca">
+            <h3>Alejandro Machuca</h3>
+            <p><strong>Baterista</strong></p>
 
-<div class="member-card">
-<img src="images/fabian.png" alt="Fabian">
-<h3>Fabian</h3>
-<p><strong>Tecladista</strong></p>
-<p>Desde la comuna de Coltauco, 
- llega el talento que llena de armonía,
- fuerza y emoción cada presentación. 
- Con sus teclados, Fabián aporta ese sonido que da vida
- a las melodías y acompaña cada momento especial de 
- Los Bravos del Sabor.</p>
-</div>
+            <p>
+                Desde la comuna de San Vicente de Tagua Tagua,
+                llega el encargado de marcar el ritmo y la energía
+                en cada presentación. Con talento, pasión
+                y una gran dedicación a la música tropical,
+                Alejandro es el baterista que mantiene vivo el pulso de
+                Los Bravos del Sabor.
+            </p>
+        </div>
 
-</div>
 
-</section>   
+        <div class="member-card">
+            <img src="images/juan-pardo.png" alt="Juan Pardo">
+            <h3>Juan Pardo "El Diablo Chico"</h3>
+            <p><strong>Animador</strong></p>
+
+            <p>
+                Desde la localidad de Zúñiga,
+                es el animador oficial
+                de Los Bravos del Sabor.
+                Con su energía y carisma,
+                transforma cada presentación en
+                una experiencia llena de alegría
+                y cercanía con el público.
+            </p>
+        </div>
+
+
+        <div class="member-card">
+            <img src="images/fernando-marilao.png" alt="Fernando Marilao">
+            <h3>Fernando Marilao</h3>
+            <p><strong>Cantante</strong></p>
+
+            <p>
+                Vocalista de San Vicente de Tagua Tagua,
+                posee una voz potente y una gran
+                capacidad interpretativa,
+                siendo el encargado
+                de transmitir toda la emoción
+                de cada canción.
+            </p>
+        </div>
+
+
+        <div class="member-card">
+            <img src="images/juan-romero.png" alt="Juan Romero">
+            <h3>Juan Romero "El Mistiko"</h3>
+            <p><strong>Guitarrista</strong></p>
+
+            <p>
+                Desde Quinta de Tilcoco,
+                es el guitarrista de la agrupación.
+                Su talento, creatividad y pasión
+                por la música aportan la esencia
+                y el carácter que distinguen
+                el sonido de la banda.
+            </p>
+        </div>
+
+
+        <div class="member-card">
+            <img src="images/luis-caro.png" alt="Luis Caro">
+            <h3>Luis Caro</h3>
+            <p><strong>Acordeonista</strong></p>
+
+            <p>
+                Desde la comuna de Coinco,
+                llega el talento que pone sentimiento,
+                alegría y tradición en cada melodía.
+                Con su acordeón, Luchito Caro aporta ese sonido
+                inconfundible que hace vibrar al público y le da
+                identidad a cada presentación de Los Bravos del Sabor.
+            </p>
+        </div>
+
+
+        <div class="member-card">
+            <img src="images/fabian.png" alt="Fabian">
+            <h3>Fabian</h3>
+            <p><strong>Tecladista</strong></p>
+
+            <p>
+                Desde la comuna de Coltauco,
+                llega el talento que llena de armonía,
+                fuerza y emoción cada presentación.
+                Con sus teclados, Fabián aporta ese sonido que da vida
+                a las melodías y acompaña cada momento especial de
+                Los Bravos del Sabor.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     PRÓXIMOS EVENTOS
+================================ -->
 
 <section id="eventos" class="eventos-section">
 
-<h2>🎤 Próximos Eventos</h2> <div class="eventos-lista"> 
- <!-- EVENTO 1 --> <div class="evento-card"> <p class="event-date">
-  17 DE SEPTIEMBRE DE 2026 </p> <h3>Fonda Oficial de Quinta de Tilcoco</h3> 
-  <p> Los Bravos del Sabor estarán presentes en la <strong>Fonda Oficial de Quinta de Tilcoco
-  </strong>, celebrando nuestras Fiestas Patrias con toda la energía y sabor de nuestro show. 
-  </p> </div> <!-- EVENTO 2 --> <div class="evento-card"> <p class="event-date">  19 DE SEPTIEMBRE DE 2026
-  </p> <h3>Fiestas Patrias</h3> <h4>San Vicente de Tagua Tagua</h4> <p> Nos encontramos nuevamente con nuestro público en 
-  <strong>San Vicente de Tagua Tagua</strong> para celebrar las Fiestas Patrias al ritmo de Los Bravos del Sabor. 
-  </p> </div> </div> <!-- BOTONES DEL EVENTO -->
- <div class="event-buttons"> <a href="https://www.facebook.com/reel/989591087236699" target="_blank" class="event-btn">
-  🎥 Ver invitación </a> <a href="#contacto" class="event-btn"> 📞 Contratar la banda </a> </div> </section>
+    <h2>🎤 Próximos Eventos</h2>
+
+    <div class="eventos-lista">
+
+        <div class="evento-card">
+
+            <div class="evento-fecha">
+                🇨🇱 17 DE SEPTIEMBRE DE 2026
+            </div>
+
+            <h3>Fonda Oficial</h3>
+
+            <h4>Quinta de Tilcoco</h4>
+
+            <p>
+                Los Bravos del Sabor estarán presentes en la
+                <strong>Fonda Oficial de Quinta de Tilcoco</strong>,
+                celebrando nuestras Fiestas Patrias con toda
+                la energía y sabor de nuestro show.
+            </p>
+
+        </div>
+
+
+        <div class="evento-card">
+
+            <div class="evento-fecha">
+                🇨🇱 19 DE SEPTIEMBRE DE 2026
+            </div>
+
+            <h3>Fiestas Patrias</h3>
+
+            <h4>San Vicente de Tagua Tagua</h4>
+
+            <p>
+                Nos encontramos nuevamente con nuestro público en
+                <strong>San Vicente de Tagua Tagua</strong>
+                para celebrar las Fiestas Patrias al ritmo
+                de Los Bravos del Sabor.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="event-buttons">
+
+        <a href="https://www.facebook.com/reel/989591087236699"
+           target="_blank"
+           class="event-btn">
+            🎥 Ver invitación
+        </a>
+
+        <a href="#contacto"
+           class="event-btn">
+            📞 Contratar la banda
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     GALERÍA
+================================ -->
 
 <section class="section reveal" id="galeria">
 
-<h2>📸 Galería</h2>
+    <h2>📸 Galería</h2>
 
-<div class="gallery">
+    <div class="gallery">
 
-<img src="images/foto 1.jpeg" onclick="openLightbox(this.src)">
-<img src="images/foto 2.jpg" onclick="openLightbox(this.src)">
-<img src="images/foto 3.jpg" onclick="openLightbox(this.src)">
-<img src="images/foto 4.jpg" onclick="openLightbox(this.src)">
-<img src="images/foto 5.jpg" onclick="openLightbox(this.src)">
-<img src="images/foto 6.jpg" onclick="openLightbox(this.src)">
-<img src="images/foto 7.jpg" onclick="openLightbox(this.src)">
-<img src="images/foto 8.jpg" onclick="openLightbox(this.src)">
+        <img src="images/foto 1.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/foto 2.jpg" onclick="openLightbox(this.src)">
+        <img src="images/foto 3.jpg" onclick="openLightbox(this.src)">
+        <img src="images/foto 4.jpg" onclick="openLightbox(this.src)">
+        <img src="images/foto 5.jpg" onclick="openLightbox(this.src)">
+        <img src="images/foto 6.jpg" onclick="openLightbox(this.src)">
+        <img src="images/foto 7.jpg" onclick="openLightbox(this.src)">
+        <img src="images/foto 8.jpg" onclick="openLightbox(this.src)">
 
-</div>
-</section> 
+    </div>
+
+</section>
+
+
+<!-- ================================
+     MÚSICA
+================================ -->
 
 <section class="section reveal" id="musica">
 
-<h2>🎵 Música</h2>
+    <h2>🎵 Música</h2>
 
-<p>Escucha nuestra música en todas las plataformas digitales.</p>
+    <p>
+        Escucha nuestra música en todas las plataformas digitales.
+    </p>
 
-<div class="music-links">
+    <div class="music-links">
 
-<a href="https://open.spotify.com/intl-es/artist/50cM3GEInTJJNM71OyqZaB"
-target="_blank"
-class="music-btn spotify">
-<i class="fab fa-spotify"></i> Spotify
-</a>
+        <a href="https://open.spotify.com/intl-es/artist/50cM3GEInTJJNM71OyqZaB"
+           target="_blank"
+           class="music-btn spotify">
+            <i class="fab fa-spotify"></i> Spotify
+        </a>
 
-<a href="https://music.apple.com/es/artist/los-bravos-del-sabor/1740050894"
-target="_blank"
-class="music-btn apple">
-<i class="fab fa-apple"></i> Apple Music
-</a>
+        <a href="https://music.apple.com/es/artist/los-bravos-del-sabor/1740050894"
+           target="_blank"
+           class="music-btn apple">
+            <i class="fab fa-apple"></i> Apple Music
+        </a>
 
-<a href="https://music.youtube.com/channel/UCgvX3rfOCugZXjWAZmPHd-Q"
-target="_blank"
-class="music-btn youtube">
-<i class="fab fa-youtube"></i> YouTube Music
-</a>
+        <a href="https://music.youtube.com/channel/UCgvX3rfOCugZXjWAZmPHd-Q"
+           target="_blank"
+           class="music-btn youtube">
+            <i class="fab fa-youtube"></i> YouTube Music
+        </a>
 
-<a href="https://link.deezer.com/s/33HAQdkUY46vCEOgjVud6"
-target="_blank"
-class="music-btn deezer">
-<i class="fas fa-music"></i> Deezer
-</a>
+        <a href="https://link.deezer.com/s/33HAQdkUY46vCEOgjVud6"
+           target="_blank"
+           class="music-btn deezer">
+            <i class="fas fa-music"></i> Deezer
+        </a>
 
-<a href="https://tidal.com/artist/47036088/u"
-target="_blank"
-class="music-btn tidal">
-<i class="fas fa-wave-square"></i> TIDAL
-</a>
+        <a href="https://tidal.com/artist/47036088/u"
+           target="_blank"
+           class="music-btn tidal">
+            <i class="fas fa-wave-square"></i> TIDAL
+        </a>
 
-<a href="https://music.amazon.com.mx/artists/B0D1HQZTZ5/los-bravos-del-sabor"
-target="_blank"
-class="music-btn amazon">
-<i class="fab fa-amazon"></i> Amazon Music
-</a>
+        <a href="https://music.amazon.com.mx/artists/B0D1HQZTZ5/los-bravos-del-sabor"
+           target="_blank"
+           class="music-btn amazon">
+            <i class="fab fa-amazon"></i> Amazon Music
+        </a>
 
-<a href="https://www.shazam.com/es-es/artist/los-bravos-del-sabor/1740050894"
-target="_blank"
-class="music-btn shazam">
-<i class="fas fa-microphone"></i> Shazam
-</a>
+        <a href="https://www.shazam.com/es-es/artist/los-bravos-del-sabor/1740050894"
+           target="_blank"
+           class="music-btn shazam">
+            <i class="fas fa-microphone"></i> Shazam
+        </a>
 
-</div>
+    </div>
 
 </section>
+
+
+<!-- ================================
+     VIDEOS
+================================ -->
 
 <section class="section reveal" id="videos">
 
-<h2>🎬 Videos</h2>
+    <h2>🎬 Videos</h2>
 
-<p>Visita nuestro canal de YouTube:</p>
+    <p>Visita nuestro canal de YouTube:</p>
 
-<a href="https://www.youtube.com/@LosBravosDelsabor"
-   target="_blank"
-   style="display:inline-block;padding:12px 20px;background:#ff0000;color:white;text-decoration:none;border-radius:8px;">
-   📺 Ver Canal de YouTube
-</a>
+    <a href="https://www.youtube.com/@LosBravosDelsabor"
+       target="_blank"
+       style="display:inline-block;padding:12px 20px;background:#ff0000;color:white;text-decoration:none;border-radius:8px;">
+        📺 Ver Canal de YouTube
+    </a>
+
 </section>
+
+
+<!-- ================================
+     CONTACTO
+================================ -->
 
 <section class="section reveal" id="contacto">
 
-<h2>📞 Contrataciones</h2>
+    <h2>📞 Contrataciones</h2>
 
-<a href="pdf/Dossier-Los-bravos-del-sabor.pdf"
-   class="btn-dossier"
-   download>
-    📄 Descargar Dossier
-</a>
-<p class="contact-text">
-Fiestas Costumbristas<br>
-Festivales<br>
-Eventos Municipales<br>
-Matrimonios<br>
-Cumpleaños<br>
-Eventos Corporativos<br>
-Celebraciones Privadas
-</p>
-
-<a href="https://wa.me/56941585397"
-class="btn-whatsapp">
-
-<i class="fab fa-whatsapp"></i>
-+56 9 4158 5397
-
-</a>
-
-<div class="email-contacto">
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:losbravosdelsaboroficial@gmail.com">
-        losbravosdelsaboroficial@gmail.com
+    <a href="pdf/Dossier-Los-bravos-del-sabor.pdf"
+       class="btn-dossier"
+       download>
+        📄 Descargar Dossier
     </a>
-</div>
 
+    <p class="contact-text">
+        Fiestas Costumbristas<br>
+        Festivales<br>
+        Eventos Municipales<br>
+        Matrimonios<br>
+        Cumpleaños<br>
+        Eventos Corporativos<br>
+        Celebraciones Privadas
+    </p>
+
+    <a href="https://wa.me/56941585397"
+       class="btn-whatsapp">
+
+        <i class="fab fa-whatsapp"></i>
+        +56 9 4158 5397
+
+    </a>
+
+    <div class="email-contacto">
+
+        <i class="fas fa-envelope"></i>
+
+        <a href="mailto:losbravosdelsaboroficial@gmail.com">
+            losbravosdelsaboroficial@gmail.com
+        </a>
+
+    </div>
 
 </section>
+
+
+<!-- ================================
+     REDES SOCIALES
+================================ -->
 
 <section class="section reveal">
 
-<h2>🌐 Redes Sociales</h2>
+    <h2>🌐 Redes Sociales</h2>
 
-<div class="socials">
- 
-<a href="https://www.facebook.com/los.bravos.del.sabor.2025" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
- 
-<a href="https://www.instagram.com/losbravosdelsaboroficial" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
+    <div class="socials">
 
-<a href="https://www.tiktok.com/@losbravosdelsabor" target="_blank">
-<i class="fab fa-tiktok"></i>
-</a>
+        <a href="https://www.facebook.com/los.bravos.del.sabor.2025"
+           target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
 
-<a href="https://www.youtube.com/@losbravosdelsabor" target="_blank">
-<i class="fab fa-youtube"></i>
-</a>
+        <a href="https://www.instagram.com/losbravosdelsaboroficial"
+           target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
 
-</div>
+        <a href="https://www.tiktok.com/@losbravosdelsabor"
+           target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@losbravosdelsabor"
+           target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
 
 </section>
 
+
+<!-- ================================
+     FOOTER
+================================ -->
+
 <footer>
 
-<img src="images/logo.jpeg" alt="Los Bravos del Sabor">
+    <img src="images/logo.jpeg" alt="Los Bravos del Sabor">
 
-<p>© 2025 Los Bravos del Sabor</p>
+    <p>© 2025 Los Bravos del Sabor</p>
 
-<p>¡BRAOO PERO CON SABOR!</p>
+    <p>¡BRAOO PERO CON SABOR!</p>
 
 </footer>
 
+
+<!-- ================================
+     LIGHTBOX
+================================ -->
+
 <div id="lightbox">
-<span onclick="closeLightbox()">×</span>
-<img id="lightbox-img">
+
+    <span onclick="closeLightbox()">×</span>
+
+    <img id="lightbox-img">
+
 </div>
 
-<a href="https://wa.me/56941585397"
-class="floating-whatsapp"
-target="_blank">
 
-<i class="fab fa-whatsapp"></i>
+<!-- WHATSAPP FLOTANTE -->
+
+<a href="https://wa.me/56941585397"
+   class="floating-whatsapp"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
 
 </a>
+
 
 <script src="script.js"></script>
 
 </body>
 </html>
+```
