@@ -110,3 +110,53 @@ console.log("Diferencia:", diferencia);
         font-size: 1.2rem;
     }
 }
+```css
+.eventos-lista {
+    width: 100%;
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+
+    box-sizing: border-box;
+}
+
+.evento-card {
+    width: 100%;
+    max-width: 430px;
+    box-sizing: border-box;
+
+    padding: 25px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+}
+
+.evento-card h3 {
+    color: #d4af37;
+    margin: 15px 0;
+}
+
+.event-date {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .eventos-lista {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .evento-card {
+        max-width: 100%;
+    }
+}
+```
