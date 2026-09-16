@@ -51,3 +51,62 @@ function actualizarContador(){
 actualizarContador();
 setInterval(actualizarContador,1000);
 console.log("Diferencia:", diferencia);
+.eventos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.evento-card {
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid #d4af37;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.evento-card h3 {
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+.evento-card p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.event-date {
+    color: #d4af37 !important;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+.event-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 📱 CELULARES */
+@media (max-width: 768px) {
+
+    .eventos-lista {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 25px 15px;
+    }
+
+    .evento-card {
+        padding: 20px;
+    }
+
+    .evento-card h3 {
+        font-size: 1.2rem;
+    }
+}
