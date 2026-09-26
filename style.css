@@ -544,6 +544,150 @@ font-size:16px;
 
 }
 
+```css
+/* ========================================
+   LETRAS FLUORESCENTES / NEÓN
+   LOS BRAVOS DEL SABOR
+======================================== */
+
+#eventos h2,
+#eventos h3,
+#eventos p,
+#eventos strong,
+#eventos .evento-frase,
+#eventos .evento-lugar,
+#eventos .dia,
+#eventos .mes {
+
+    animation: neonFosforescente 2.8s infinite alternate;
+
+    font-weight: 700;
+
+    /* Brillo exterior */
+    text-shadow:
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        0 0 35px currentColor;
+
+}
+
+
+/* ========================================
+   CAMBIO DE COLORES + INTENSIDAD
+======================================== */
+
+@keyframes neonFosforescente {
+
+    0% {
+        color: #d4a017;
+
+        text-shadow:
+            0 0 5px #d4a017,
+            0 0 10px #d4a017,
+            0 0 20px #d4a017,
+            0 0 35px #d4a017;
+
+        opacity: 1;
+    }
+
+    20% {
+        color: #fff700;
+
+        text-shadow:
+            0 0 5px #fff700,
+            0 0 10px #fff700,
+            0 0 25px #fff700,
+            0 0 45px #fff700;
+
+        opacity: 0.95;
+    }
+
+    40% {
+        color: #ffffff;
+
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 15px #ffffff,
+            0 0 30px #ffffff,
+            0 0 50px #ffffff;
+
+        opacity: 1;
+    }
+
+    60% {
+        color: #ffb300;
+
+        text-shadow:
+            0 0 5px #ffb300,
+            0 0 15px #ffb300,
+            0 0 30px #ffb300,
+            0 0 50px #ffb300;
+
+        opacity: 0.9;
+    }
+
+    80% {
+        color: #ffea00;
+
+        text-shadow:
+            0 0 5px #ffea00,
+            0 0 15px #ffea00,
+            0 0 30px #ffea00,
+            0 0 55px #ffea00;
+
+        opacity: 1;
+    }
+
+    100% {
+        color: #d4a017;
+
+        text-shadow:
+            0 0 5px #d4a017,
+            0 0 10px #d4a017,
+            0 0 20px #d4a017,
+            0 0 35px #d4a017;
+
+        opacity: 1;
+    }
+}
+
+
+/* ========================================
+   BRAOO PERO CON SABOR
+   MÁS BRILLANTE
+======================================== */
+
+#eventos .evento-frase {
+
+    font-size: 1.3rem;
+    font-weight: 900;
+
+    animation:
+        neonFosforescente 1.8s infinite alternate,
+        parpadeoNeon 2.5s infinite;
+
+}
+
+
+/* ========================================
+   PARPADEO SUAVE DE LUZ
+======================================== */
+
+@keyframes parpadeoNeon {
+
+    0%, 18%, 22%, 63%, 65%, 100% {
+        opacity: 1;
+    }
+
+    20%, 64% {
+        opacity: 0.65;
+    }
+
+}
+```
+
+
 }
     
     
