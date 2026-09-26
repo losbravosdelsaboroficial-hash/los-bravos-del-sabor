@@ -352,370 +352,458 @@ footer img{
 
 /* MOVIL */
 
+```css
+/* ================================================
+   AJUSTE FINAL DEL RESPONSIVE
+================================================ */
+
 @media(max-width:768px){
 
-    nav ul{
-        justify-content:flex-start;
-        overflow-x:auto;
-        white-space:nowrap;
-        padding:0 15px;
+    .hero{
+        height:90vh;
     }
 
-    .hero-content img{
-        width:140px;
+    .hero-logo{
+        width:250px;
     }
 
-    .hero-content h1{
-        font-size:2.2rem;
+    .hero h1{
+        font-size:38px;
     }
 
-    .hero-content h2{
-        font-size:1.3rem;
+    .hero h2{
+        font-size:20px;
     }
 
-    .hero-content p{
-        font-size:1rem;
+    .hero p{
+        font-size:16px;
     }
 
-    .section h2{
-        font-size:1.8rem;
-    }
-
-    .gallery{
-        grid-template-columns:1fr;
-    }
 }
-/* INTEGRANTES */
 
-#integrantes{
+
+/* ================================================
+   TARJETA DE EVENTO
+================================================ */
+
+.eventos-container{
     width:100%;
-    padding:80px 20px;
-    text-align:center;
-}
-
-#integrantes h2{
-    margin-bottom:40px;
-}
-
-.members{
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(3, 300px);
+    display:flex;
     justify-content:center;
-    align-items:start;
-    gap:40px;
+    align-items:center;
+    padding:20px;
 }
 
-.member-card{
-    text-align:center;
-    width:300px;
-}
+.evento-card{
 
-.member-card img{
     width:100%;
-    display:block;
-    margin:auto;
+    max-width:750px;
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+    padding:30px;
+
+    border:2px solid #d4a017;
+    border-radius:20px;
+
+    background:rgba(0,0,0,.75);
+
+    box-shadow:
+        0 0 10px rgba(212,160,23,.4),
+        0 0 30px rgba(212,160,23,.15);
+
 }
 
-/* INTEGRANTES RESPONSIVE */
 
-@media(max-width:900px){
+/* ================================================
+   FECHA
+================================================ */
 
-    .members{
-        grid-template-columns:repeat(2, minmax(250px,300px));
+.evento-fecha{
+
+    min-width:120px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    border:2px solid #d4a017;
+    border-radius:15px;
+
+    padding:15px;
+
+    background:#000;
+
+}
+
+
+/* NÚMERO */
+
+.evento-fecha .dia{
+
+    display:block;
+
+    font-size:55px;
+    font-weight:900;
+    line-height:1;
+
+}
+
+
+/* MES */
+
+.evento-fecha .mes{
+
+    display:block;
+
+    font-size:22px;
+    font-weight:900;
+
+    margin-top:8px;
+}
+
+
+/* ================================================
+   INFORMACIÓN
+================================================ */
+
+.evento-info{
+    text-align:left;
+    flex:1;
+}
+
+.evento-info h3{
+
+    font-size:28px;
+    margin-bottom:12px;
+
+}
+
+.evento-info p{
+
+    font-size:16px;
+    line-height:1.7;
+    margin-bottom:12px;
+
+}
+
+
+/* FRASE */
+
+.evento-frase{
+
+    font-size:20px !important;
+    font-weight:900;
+
+}
+
+
+/* ================================================
+   EFECTO NEÓN FLUORESCENTE
+================================================ */
+
+/* TÍTULO */
+
+#eventos h2{
+
+    animation:neonTitulo 2s infinite alternate;
+
+}
+
+
+/* NOMBRE DEL LUGAR */
+
+#eventos .evento-info h3{
+
+    animation:neonLugar 2.5s infinite alternate;
+
+}
+
+
+/* TEXTOS */
+
+#eventos .evento-info p:not(.evento-frase){
+
+    animation:neonTexto 3s infinite alternate;
+
+}
+
+
+/* FECHA */
+
+#eventos .evento-fecha .dia,
+#eventos .evento-fecha .mes{
+
+    animation:neonFecha 1.5s infinite alternate;
+
+}
+
+
+/* FRASE BRAOO */
+
+#eventos .evento-frase{
+
+    animation:neonFrase 1.2s infinite alternate;
+
+}
+
+
+/* ================================================
+   ANIMACIÓN TÍTULO
+================================================ */
+
+@keyframes neonTitulo{
+
+    0%{
+
+        color:#d4a017;
+
+        text-shadow:
+        0 0 5px #d4a017,
+        0 0 15px #d4a017,
+        0 0 30px #d4a017;
+
+    }
+
+    50%{
+
+        color:#fff;
+
+        text-shadow:
+        0 0 5px #fff,
+        0 0 15px #fff,
+        0 0 35px #fff700,
+        0 0 60px #fff700;
+
+    }
+
+    100%{
+
+        color:#00ffff;
+
+        text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff,
+        0 0 30px #00ffff,
+        0 0 60px #00ffff;
+
     }
 
 }
 
+
+/* ================================================
+   ANIMACIÓN NOMBRE DEL EVENTO
+================================================ */
+
+@keyframes neonLugar{
+
+    0%{
+
+        color:#00ffff;
+
+        text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff,
+        0 0 30px #00ffff;
+
+    }
+
+    50%{
+
+        color:#ff00ff;
+
+        text-shadow:
+        0 0 5px #ff00ff,
+        0 0 15px #ff00ff,
+        0 0 35px #ff00ff,
+        0 0 55px #ff00ff;
+
+    }
+
+    100%{
+
+        color:#fff700;
+
+        text-shadow:
+        0 0 5px #fff700,
+        0 0 15px #fff700,
+        0 0 30px #fff700;
+
+    }
+
+}
+
+
+/* ================================================
+   ANIMACIÓN TEXTOS
+================================================ */
+
+@keyframes neonTexto{
+
+    0%{
+
+        color:#fff;
+
+        text-shadow:
+        0 0 5px #fff,
+        0 0 10px #00ffff;
+
+    }
+
+    50%{
+
+        color:#00ffff;
+
+        text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff,
+        0 0 30px #00ffff;
+
+    }
+
+    100%{
+
+        color:#ffea00;
+
+        text-shadow:
+        0 0 5px #ffea00,
+        0 0 15px #ffea00,
+        0 0 30px #ffea00;
+
+    }
+
+}
+
+
+/* ================================================
+   ANIMACIÓN FECHA
+================================================ */
+
+@keyframes neonFecha{
+
+    0%{
+
+        color:#fff700;
+
+        text-shadow:
+        0 0 5px #fff700,
+        0 0 15px #fff700,
+        0 0 30px #fff700;
+
+    }
+
+    50%{
+
+        color:#ff6600;
+
+        text-shadow:
+        0 0 5px #ff6600,
+        0 0 15px #ff6600,
+        0 0 30px #ff6600,
+        0 0 50px #ff6600;
+
+    }
+
+    100%{
+
+        color:#fff;
+
+        text-shadow:
+        0 0 5px #fff,
+        0 0 15px #fff,
+        0 0 35px #fff;
+
+    }
+
+}
+
+
+/* ================================================
+   BRAOO PERO CON SABOR
+================================================ */
+
+@keyframes neonFrase{
+
+    0%{
+
+        color:#ff00ff;
+
+        text-shadow:
+        0 0 5px #ff00ff,
+        0 0 15px #ff00ff,
+        0 0 30px #ff00ff,
+        0 0 50px #ff00ff;
+
+    }
+
+    50%{
+
+        color:#00ffff;
+
+        text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff,
+        0 0 30px #00ffff,
+        0 0 60px #00ffff;
+
+    }
+
+    100%{
+
+        color:#fff700;
+
+        text-shadow:
+        0 0 5px #fff700,
+        0 0 15px #fff700,
+        0 0 30px #fff700,
+        0 0 60px #fff700;
+
+    }
+
+}
+
+
+/* ================================================
+   MÓVIL
+================================================ */
 
 @media(max-width:600px){
 
-    .members{
-        grid-template-columns:1fr;
-        padding:0 10px;
+    .evento-card{
+
+        flex-direction:column;
+        text-align:center;
+        padding:25px 15px;
+
     }
 
-    .member-card{
-        width:100%;
-        max-width:300px;
-        margin:auto;
+    .evento-info{
+
+        text-align:center;
+
     }
 
-    .hero-content img{
-        width:170px;
+    .evento-fecha{
+
+        min-width:110px;
+
     }
 
-    .hero-content h1{
-        font-size:2.2rem;
+    .evento-fecha .dia{
+
+        font-size:45px;
+
     }
 
-    .hero-content h2{
-        font-size:1.3rem;
+    .evento-info h3{
+
+        font-size:23px;
+
     }
 
-    .hero-content p{
-        font-size:1rem;
-    }
-
-}
-
-.btn-dossier{
-    display:inline-block;
-    background:#c62828;
-    color:#fff;
-    padding:14px 28px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.btn-dossier:hover{
-    background:#9e1f1f;
-    transform:translateY(-2px);
-}
-.contador-evento{
-    margin:15px 0;
-    font-size:1.2rem;
-    font-weight:bold;
-    color:#D4AF37;
-}
-.event-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#d4a017;
-    color:#fff;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:all .3s ease;
-}
-
-.event-btn:hover{
-    background:#f0b92c;
-    transform:scale(1.05);
-}
-.event-image{
-    width:500px;
-    max-width:100%;
-    height:auto;
-    display:block;
-    margin:20px auto;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,.3);
-}
-
-.event-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-@media(max-width:768px){
-
-.hero{
-
-height:90vh;
-
-}
-
-.hero-logo{
-
-width:250px;
-
-}
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-.hero h2{
-
-font-size:20px;
-
-}
-
-.hero p{
-
-font-size:16px;
-
-}
-```css
-/* ==================================================
-   EFECTO NEÓN FLUORESCENTE
-   PRÓXIMOS EVENTOS
-================================================== */
-
-/* TÍTULO PRINCIPAL */
-#eventos h2 {
-    color: #fff700 !important;
-    animation: neonTitulo 2s infinite alternate;
-}
-
-/* NOMBRE DEL EVENTO */
-#eventos h3 {
-    color: #00ffff !important;
-    animation: neonTexto 2.5s infinite alternate;
-}
-
-/* TEXTOS */
-#eventos p,
-#eventos .evento-lugar {
-    color: #ffffff !important;
-    animation: neonTexto 3s infinite alternate;
-}
-
-/* FECHA */
-#eventos .dia,
-#eventos .mes {
-    color: #fff700 !important;
-    animation: neonFecha 1.8s infinite alternate;
-}
-
-/* FRASE BRAOO */
-#eventos .evento-frase {
-    color: #ff00ff !important;
-    font-weight: 900;
-    animation: neonFrase 1.5s infinite alternate;
-}
-
-
-/* ==================================================
-   BRILLO DEL TÍTULO
-================================================== */
-
-@keyframes neonTitulo {
-
-    0% {
-        color: #fff700 !important;
-        text-shadow:
-            0 0 5px #fff700,
-            0 0 10px #fff700,
-            0 0 20px #fff700,
-            0 0 40px #fff700;
-    }
-
-    50% {
-        color: #ffffff !important;
-        text-shadow:
-            0 0 5px #ffffff,
-            0 0 15px #ffffff,
-            0 0 30px #fff700,
-            0 0 60px #fff700;
-    }
-
-    100% {
-        color: #00ffff !important;
-        text-shadow:
-            0 0 5px #00ffff,
-            0 0 15px #00ffff,
-            0 0 30px #00ffff,
-            0 0 60px #00ffff;
-    }
-}
-
-
-/* ==================================================
-   BRILLO DE TEXTOS
-================================================== */
-
-@keyframes neonTexto {
-
-    0% {
-        color: #ffffff !important;
-        text-shadow:
-            0 0 3px #ffffff,
-            0 0 8px #00ffff;
-    }
-
-    50% {
-        color: #00ffff !important;
-        text-shadow:
-            0 0 5px #00ffff,
-            0 0 15px #00ffff,
-            0 0 30px #00ffff;
-    }
-
-    100% {
-        color: #ffea00 !important;
-        text-shadow:
-            0 0 5px #ffea00,
-            0 0 15px #ffea00,
-            0 0 30px #ffea00,
-            0 0 50px #ffea00;
-    }
-}
-
-
-/* ==================================================
-   FECHA NEÓN
-================================================== */
-
-@keyframes neonFecha {
-
-    0% {
-        color: #fff700 !important;
-        text-shadow:
-            0 0 5px #fff700,
-            0 0 15px #fff700,
-            0 0 30px #fff700;
-    }
-
-    50% {
-        color: #ff6600 !important;
-        text-shadow:
-            0 0 5px #ff6600,
-            0 0 15px #ff6600,
-            0 0 30px #ff6600,
-            0 0 50px #ff6600;
-    }
-
-    100% {
-        color: #ffffff !important;
-        text-shadow:
-            0 0 5px #ffffff,
-            0 0 15px #ffffff,
-            0 0 30px #ffffff;
-    }
-}
-
-
-/* ==================================================
-   FRASE BRAOO - EFECTO MÁS FUERTE
-================================================== */
-
-@keyframes neonFrase {
-
-    0% {
-        color: #ff00ff !important;
-        text-shadow:
-            0 0 5px #ff00ff,
-            0 0 15px #ff00ff,
-            0 0 30px #ff00ff,
-            0 0 50px #ff00ff;
-    }
-
-    50% {
-        color: #00ffff !important;
-        text-shadow:
-            0 0 5px #00ffff,
-            0 0 15px #00ffff,
-            0 0 30px #00ffff,
-            0 0 60px #00ffff;
-    }
-
-    100% {
-        color: #fff700 !important;
-        text-shadow:
-            0 0 5px #fff700,
-            0 0 15px #fff700,
-            0 0 30px #fff700,
-            0 0 60px #fff700;
-    }
 }
 ```
-
-    
