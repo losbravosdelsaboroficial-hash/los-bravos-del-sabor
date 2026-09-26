@@ -544,68 +544,6 @@ font-size:16px;
 
 }
 
-/* CONTADOR */
-
-.contador-evento{
-    margin:40px auto;
-    text-align:center;
-}
-
-.contador-evento h3{
-    color:#d4af37;
-    margin-bottom:20px;
-    font-size:1.5rem;
-}
-
-.countdown{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.time-box{
-    background:#111;
-    border:2px solid #d4af37;
-    border-radius:15px;
-    width:110px;
-    padding:20px 10px;
-    box-shadow:0 0 20px rgba(212,175,55,.3);
-    transition:.3s;
-}
-
-.time-box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 25px rgba(212,175,55,.7);
-}
-
-.time-box span{
-    display:block;
-    font-size:2.5rem;
-    font-weight:bold;
-    color:#d4af37;
-}
-
-.time-box small{
-    color:#fff;
-    font-size:1rem;
-}
-
-@media(max-width:768px){
-
-    .time-box{
-        width:75px;
-        padding:15px 5px;
-    }
-
-    .time-box span{
-        font-size:1.7rem;
-    }
-
-    .time-box small{
-        font-size:.8rem;
-    }
-
 }
     
     
