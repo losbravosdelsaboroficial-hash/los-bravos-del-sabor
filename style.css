@@ -901,10 +901,8 @@ footer img{
         right:15px;
         bottom:15px;
     }
-}
-
 /* ==================================================
-   EFECTO FLUORESCENTE - PRÓXIMOS EVENTOS
+   NEÓN ANIMADO - PRÓXIMOS EVENTOS
 ================================================== */
 
 #eventos h2,
@@ -914,36 +912,130 @@ footer img{
 #eventos .evento-frase,
 #eventos .evento-fecha .dia,
 #eventos .evento-fecha .mes{
-    text-shadow:
-        0 0 5px #D4AF37,
-        0 0 10px #D4AF37,
-        0 0 20px #D4AF37,
-        0 0 35px rgba(212,175,55,.8);
+    animation: neonEventos 1.8s ease-in-out infinite alternate;
 }
 
 
-/* Animación de brillo */
+/* TÍTULOS PRINCIPALES */
 
 #eventos h2,
 #eventos h3,
 #eventos .evento-frase{
-    animation:eventoNeon 2s infinite alternate;
+
+    color:#D4AF37;
+
+    text-shadow:
+        0 0 4px #D4AF37,
+        0 0 10px #D4AF37,
+        0 0 20px #D4AF37,
+        0 0 35px #FFD700;
 }
 
-@keyframes eventoNeon{
 
-    from{
+/* FECHA */
+
+#eventos .evento-fecha .dia{
+    color:#FFD700;
+
+    text-shadow:
+        0 0 5px #FFD700,
+        0 0 15px #FFD700,
+        0 0 30px #FFD700;
+}
+
+
+/* MES */
+
+#eventos .evento-fecha .mes{
+    color:#FFFFFF;
+
+    text-shadow:
+        0 0 5px #FFFFFF,
+        0 0 10px #FFD700,
+        0 0 20px #FFD700;
+}
+
+
+/* TEXTO */
+
+#eventos .evento-lugar,
+#eventos .evento-info p{
+    color:#FFFFFF;
+
+    text-shadow:
+        0 0 3px #FFFFFF,
+        0 0 8px #D4AF37;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes neonEventos{
+
+    0%{
+
+        color:#D4AF37;
+
         text-shadow:
-            0 0 5px #D4AF37,
-            0 0 10px #D4AF37,
-            0 0 20px #D4AF37;
+            0 0 3px #D4AF37,
+            0 0 7px #D4AF37,
+            0 0 15px #D4AF37;
+
     }
 
-    to{
+    50%{
+
+        color:#FFF4A3;
+
         text-shadow:
-            0 0 5px #D4AF37,
-            0 0 15px #D4AF37,
-            0 0 30px #D4AF37,
-            0 0 50px rgba(212,175,55,.9);
+            0 0 5px #FFF4A3,
+            0 0 15px #FFD700,
+            0 0 30px #FFD700,
+            0 0 45px rgba(255,215,0,.8);
+
+    }
+
+    100%{
+
+        color:#FFFFFF;
+
+        text-shadow:
+            0 0 4px #FFFFFF,
+            0 0 10px #FFD700,
+            0 0 20px #FFD700,
+            0 0 40px #D4AF37;
+
+    }
+}
+
+
+/* DESTELLO EXTRA EN EL TÍTULO */
+
+#eventos h2{
+    animation:
+        neonEventos 1.5s ease-in-out infinite alternate,
+        destelloTitulo 3s linear infinite;
+}
+
+@keyframes destelloTitulo{
+
+    0%,85%,100%{
+        opacity:1;
+    }
+
+    88%{
+        opacity:.65;
+    }
+
+    91%{
+        opacity:1;
+    }
+
+    94%{
+        opacity:.75;
+    }
+
+    97%{
+        opacity:1;
     }
 }
