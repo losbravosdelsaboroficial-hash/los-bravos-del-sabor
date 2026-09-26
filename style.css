@@ -903,3 +903,47 @@ footer img{
     }
 }
 
+/* ==================================================
+   EFECTO FLUORESCENTE - PRÓXIMOS EVENTOS
+================================================== */
+
+#eventos h2,
+#eventos h3,
+#eventos .evento-lugar,
+#eventos .evento-info p,
+#eventos .evento-frase,
+#eventos .evento-fecha .dia,
+#eventos .evento-fecha .mes{
+    text-shadow:
+        0 0 5px #D4AF37,
+        0 0 10px #D4AF37,
+        0 0 20px #D4AF37,
+        0 0 35px rgba(212,175,55,.8);
+}
+
+
+/* Animación de brillo */
+
+#eventos h2,
+#eventos h3,
+#eventos .evento-frase{
+    animation:eventoNeon 2s infinite alternate;
+}
+
+@keyframes eventoNeon{
+
+    from{
+        text-shadow:
+            0 0 5px #D4AF37,
+            0 0 10px #D4AF37,
+            0 0 20px #D4AF37;
+    }
+
+    to{
+        text-shadow:
+            0 0 5px #D4AF37,
+            0 0 15px #D4AF37,
+            0 0 30px #D4AF37,
+            0 0 50px rgba(212,175,55,.9);
+    }
+}
