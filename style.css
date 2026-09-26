@@ -1122,3 +1122,26 @@ footer img{
     }
 
 }
+/* CORREO ELECTRÓNICO */
+
+.email-contacto a{
+    color:#ffffff !important;
+    text-decoration:none;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ff4fd8,
+        0 0 20px #b84cff;
+
+    transition:all .3s ease;
+}
+
+.email-contacto a:hover{
+    color:#ffb3f2 !important;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ff4fd8,
+        0 0 20px #ff1493,
+        0 0 35px #8a2be2;
+}
