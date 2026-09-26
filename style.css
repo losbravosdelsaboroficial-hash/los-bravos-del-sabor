@@ -906,7 +906,8 @@ footer img{
 
 
 /* ==================================================
-   NEÓN ANIMADO - PRÓXIMOS EVENTOS
+   NEÓN BLANCO + VIOLETA + ROSADO
+   PRÓXIMOS EVENTOS
 ================================================== */
 
 #eventos h2,
@@ -917,55 +918,77 @@ footer img{
 #eventos .evento-fecha .dia,
 #eventos .evento-fecha .mes{
 
-    animation:neonEventos 1.8s ease-in-out infinite alternate;
+    animation:neonEventos 2s ease-in-out infinite alternate;
 
 }
 
 
 /* ==================================================
-   TÍTULOS PRINCIPALES
+   TÍTULO PRÓXIMOS EVENTOS
 ================================================== */
 
-#eventos h2,
-#eventos h3,
-#eventos .evento-frase{
+#eventos h2{
 
-    color:#D4AF37 !important;
+    color:#ffffff !important;
 
     text-shadow:
-        0 0 5px #D4AF37,
-        0 0 10px #D4AF37,
-        0 0 20px #D4AF37,
-        0 0 35px #FFD700;
+        0 0 5px #ffffff,
+        0 0 10px #ff4fd8,
+        0 0 20px #b84cff,
+        0 0 40px #8a2be2,
+        0 0 60px rgba(255,79,216,.8);
 
 }
 
 
 /* ==================================================
-   FECHA
+   NOMBRE DEL EVENTO
+================================================== */
+
+#eventos h3{
+
+    color:#ffb3f2 !important;
+
+    text-shadow:
+        0 0 5px #ffb3f2,
+        0 0 10px #ff4fd8,
+        0 0 20px #d946ef,
+        0 0 35px #8a2be2;
+
+}
+
+
+/* ==================================================
+   NÚMERO 03
 ================================================== */
 
 #eventos .evento-fecha .dia{
 
-    color:#FFD700 !important;
+    color:#ffffff !important;
 
     text-shadow:
-        0 0 5px #FFD700,
-        0 0 15px #FFD700,
-        0 0 30px #FFD700,
-        0 0 45px #FFD700;
+        0 0 5px #ffffff,
+        0 0 10px #ff4fd8,
+        0 0 20px #d946ef,
+        0 0 35px #8a2be2,
+        0 0 50px #ff1493;
 
 }
 
 
+/* ==================================================
+   OCT
+================================================== */
+
 #eventos .evento-fecha .mes{
 
-    color:#FFFFFF !important;
+    color:#ffb3f2 !important;
 
     text-shadow:
-        0 0 5px #FFFFFF,
-        0 0 10px #FFD700,
-        0 0 20px #FFD700;
+        0 0 5px #ffffff,
+        0 0 10px #ff4fd8,
+        0 0 20px #b84cff,
+        0 0 35px #8a2be2;
 
 }
 
@@ -977,54 +1000,86 @@ footer img{
 #eventos .evento-lugar,
 #eventos .evento-info p{
 
-    color:#FFFFFF !important;
+    color:#ffffff !important;
 
     text-shadow:
-        0 0 3px #FFFFFF,
-        0 0 8px #D4AF37,
-        0 0 18px #FFD700;
+        0 0 4px #ffffff,
+        0 0 8px #ff4fd8,
+        0 0 16px #b84cff;
 
 }
 
 
 /* ==================================================
-   ANIMACIÓN NEÓN
+   BRAOO PERO CON SABOR
+================================================== */
+
+#eventos .evento-frase{
+
+    color:#ffffff !important;
+
+    font-weight:bold;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ff4fd8,
+        0 0 20px #ff1493,
+        0 0 35px #b84cff,
+        0 0 50px #8a2be2;
+
+}
+
+
+/* ==================================================
+   ANIMACIÓN DE COLORES
 ================================================== */
 
 @keyframes neonEventos{
 
     0%{
 
-        color:#D4AF37;
+        color:#ffffff;
 
         text-shadow:
-            0 0 3px #D4AF37,
-            0 0 7px #D4AF37,
-            0 0 15px #D4AF37;
+            0 0 4px #ffffff,
+            0 0 8px #ff4fd8,
+            0 0 15px #b84cff;
 
     }
 
-    50%{
+    35%{
 
-        color:#FFF4A3;
+        color:#ffb3f2;
 
         text-shadow:
-            0 0 5px #FFF4A3,
-            0 0 15px #FFD700,
-            0 0 30px #FFD700,
-            0 0 45px #FFD700;
+            0 0 5px #ffb3f2,
+            0 0 12px #ff4fd8,
+            0 0 25px #ff1493,
+            0 0 40px #b84cff;
+
+    }
+
+    70%{
+
+        color:#d9b3ff;
+
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 12px #b84cff,
+            0 0 25px #8a2be2,
+            0 0 45px #6a0dad;
 
     }
 
     100%{
 
-        color:#FFFFFF;
+        color:#ffffff;
 
         text-shadow:
-            0 0 5px #FFFFFF,
-            0 0 15px #FFD700,
-            0 0 30px #FFD700,
-            0 0 50px #FFD700;
+            0 0 5px #ffffff,
+            0 0 12px #ff4fd8,
+            0 0 25px #b84cff,
+            0 0 50px #ff1493;
 
     }
 
@@ -1032,37 +1087,37 @@ footer img{
 
 
 /* ==================================================
-   DESTELLO EXTRA DEL TÍTULO
+   DESTELLOS DEL TÍTULO
 ================================================== */
 
 #eventos h2{
 
     animation:
-        neonEventos 1.5s ease-in-out infinite alternate,
-        destelloTitulo 3s linear infinite;
+        neonEventos 2s ease-in-out infinite alternate,
+        destelloEventos 4s linear infinite;
 
 }
 
 
-@keyframes destelloTitulo{
+@keyframes destelloEventos{
 
-    0%,80%,100%{
+    0%,75%,100%{
+        opacity:1;
+    }
+
+    78%{
+        opacity:.45;
+    }
+
+    80%{
         opacity:1;
     }
 
     84%{
-        opacity:.45;
+        opacity:.6;
     }
 
-    87%{
-        opacity:1;
-    }
-
-    90%{
-        opacity:.55;
-    }
-
-    93%{
+    86%{
         opacity:1;
     }
 
