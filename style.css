@@ -1145,3 +1145,45 @@ footer img{
         0 0 20px #ff1493,
         0 0 35px #8a2be2;
 }
+/* ==================================================
+   CONTRATACIONES - MÁS ESPACIO Y ORDEN
+================================================== */
+
+#contacto{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+#contacto h2{
+    margin-bottom:50px;
+}
+
+#contacto p{
+    margin-bottom:25px;
+    line-height:1.8;
+}
+
+#contacto .socials{
+    margin-top:35px;
+    margin-bottom:40px;
+}
+
+#contacto .email-contacto{
+    margin-top:35px;
+    margin-bottom:35px;
+    line-height:1.8;
+}
+
+#contacto .email-contacto i{
+    margin-right:10px;
+}
+
+#contacto .btn-whatsapp{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+#contacto .btn-dossier{
+    margin-top:25px;
+    margin-bottom:20px;
+}
