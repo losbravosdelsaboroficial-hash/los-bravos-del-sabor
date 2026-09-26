@@ -1,3 +1,8 @@
+```css
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+================================================== */
+
 *{
     margin:0;
     padding:0;
@@ -11,6 +16,11 @@ body{
     overflow-x:hidden;
 }
 
+
+/* ==================================================
+   FONDO DE PÁGINA
+================================================== */
+
 body::before{
     content:"";
     position:fixed;
@@ -18,7 +28,9 @@ body::before{
     left:0;
     width:100%;
     height:100%;
+
     background:url("images/fodo-pagina.jpg") center center/cover no-repeat;
+
     z-index:-2;
 }
 
@@ -30,19 +42,41 @@ body::after{
     pointer-events:none;
 
     background:
-        radial-gradient(circle at 20% 30%, rgba(255,255,255,.10), transparent 35%),
-        radial-gradient(circle at 80% 40%, rgba(255,255,255,.05), transparent 40%),
-        radial-gradient(circle at 50% 80%, rgba(255,255,255,.04), transparent 45%),
-        linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.35));
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,255,255,.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(255,255,255,.05),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(255,255,255,.04),
+            transparent 45%
+        ),
+        linear-gradient(
+            rgba(0,0,0,.10),
+            rgba(0,0,0,.35)
+        );
 }
-/* MENU */
+
+
+/* ==================================================
+   MENÚ
+================================================== */
 
 nav{
     position:fixed;
     top:0;
     width:100%;
+
     background:rgba(0,0,0,.9);
+
     z-index:1000;
+
     padding:15px 0;
 }
 
@@ -50,872 +84,242 @@ nav ul{
     display:flex;
     justify-content:center;
     align-items:center;
+
     gap:25px;
+
     list-style:none;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+
     font-size:15px;
     font-weight:600;
+
+    transition:.3s;
 }
 
-/* HERO NUEVO */
+nav a:hover{
+    color:#d4a017;
+}
+
+
+/* ==================================================
+   HERO / ENCABEZADO
+================================================== */
 
 .hero{
 
-position:relative;
+    position:relative;
 
-height:100vh;
+    height:100vh;
 
-background:url("images/hero.png") center center/cover no-repeat;
+    background:url("images/hero.png") center center/cover no-repeat;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
+    align-items:center;
 
-align-items:center;
+    text-align:center;
 
-text-align:center;
-
-overflow:hidden;
-
+    overflow:hidden;
 }
 
 .hero-overlay{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:linear-gradient(to bottom,
-rgba(0,0,0,.25),
-rgba(0,0,0,.45),
-rgba(0,0,0,.85),
-#000);
-
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.85),
+        #000
+    );
 }
 
 .hero-content{
+
     position:relative;
+
     z-index:2;
+
     max-width:900px;
+
     padding:40px 20px;
+
     margin-top:220px;
-
-
 }
 
 .hero h1{
 
-font-family:'Cinzel',serif;
+    font-family:'Cinzel',serif;
 
-font-size:70px;
+    font-size:70px;
 
-color:#D4AF37;
+    color:#D4AF37;
 
-margin-bottom:10px;
+    margin-bottom:10px;
 
-text-shadow:0 0 20px #000;
-
+    text-shadow:0 0 20px #000;
 }
 
 .hero h2{
 
-font-size:32px;
+    font-size:32px;
 
-margin-bottom:20px;
+    margin-bottom:20px;
 
-letter-spacing:3px;
-
+    letter-spacing:3px;
 }
 
 .hero p{
 
-font-size:20px;
+    font-size:20px;
 
-line-height:1.8;
+    line-height:1.8;
 
-max-width:700px;
+    max-width:700px;
 
-margin:auto;
+    margin:auto;
 
-color:#ddd;
-
+    color:#ddd;
 }
 
 .hero-buttons{
 
-margin-top:40px;
+    margin-top:40px;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-gap:20px;
+    gap:20px;
 
-flex-wrap:wrap;
-
+    flex-wrap:wrap;
 }
+
+
+/* Flecha */
 
 .scroll-down{
 
-display:inline-block;
+    display:inline-block;
 
-margin-top:50px;
+    margin-top:50px;
 
-font-size:35px;
+    font-size:35px;
 
-color:#D4AF37;
+    color:#D4AF37;
 
-animation:float 2s infinite;
-
+    animation:float 2s infinite;
 }
 
 @keyframes float{
 
-0%{transform:translateY(0);}
+    0%{
+        transform:translateY(0);
+    }
 
-50%{transform:translateY(10px);}
+    50%{
+        transform:translateY(10px);
+    }
 
-100%{transform:translateY(0);}
-
+    100%{
+        transform:translateY(0);
+    }
 }
 
-/* BOTONES */
+
+/* ==================================================
+   BOTONES
+================================================== */
 
 .btn-gold{
+
     display:inline-block;
+
     margin-top:30px;
+
     padding:15px 35px;
+
     background:#d4a017;
-    color:black;
+
+    color:#000;
+
     border-radius:50px;
+
     text-decoration:none;
+
     font-weight:bold;
+
+    transition:.3s;
 }
+
+.btn-gold:hover{
+
+    background:#f0c040;
+
+    transform:scale(1.05);
+}
+
 
 .btn-whatsapp{
+
     display:inline-block;
+
     background:#25d366;
+
     padding:18px 30px;
+
     border-radius:50px;
+
     text-decoration:none;
+
     color:white;
+
     font-weight:bold;
+
+    transition:.3s;
 }
 
-/* SECCIONES */
+.btn-whatsapp:hover{
+
+    transform:scale(1.05);
+}
+
+
+/* ==================================================
+   SECCIONES
+================================================== */
 
 .section{
+
     padding:80px 20px;
+
     text-align:center;
+
     background:rgba(0,0,0,.15);
+
     backdrop-filter:blur(2px);
 }
 
 .section h2{
+
     color:#d4a017;
+
     margin-bottom:30px;
+
     font-size:2.2rem;
 }
-/* EVENTOS */
 
-.event-card{
-    max-width:350px;
-    margin:auto;
-    border:1px solid #d4a017;
-    border-radius:20px;
-    padding:30px;
-}
 
-/* GALERIA */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.gallery img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:15px;
-    cursor:pointer;
-}
-
-/* MUSICA */
-
-.music-links{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.music-btn{
-    padding:15px 25px;
-    border-radius:10px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    background:#d4a017;
-}
-
-.music-btn:hover{
-    transform:scale(1.05);
-}
-
-/* REDES */
-
-.socials{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-}
-
-.socials a{
-    font-size:3rem;
-    color:#d4a017;
-}
-
-/* FOOTER */
-
-footer{
-    padding:50px 20px;
-    text-align:center;
-    border-top:1px solid #333;
-}
-
-footer img{
-    width:120px;
-    margin-bottom:15px;
-}
-
-/* LIGHTBOX */
-
-#lightbox{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.95);
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-
-#lightbox img{
-    max-width:90%;
-    max-height:90%;
-}
-
-#lightbox span{
-    position:absolute;
-    top:20px;
-    right:30px;
-    font-size:50px;
-    cursor:pointer;
-}
-
-/* WHATSAPP */
-
-.floating-whatsapp{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#25d366;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:2rem;
-    color:white;
-    text-decoration:none;
-    z-index:999;
-}
-
-/* ANIMACION */
-
-.reveal{
-    opacity:1;
-    transform:none;
-}
-
-/* MOVIL */
-
-```css
-/* ================================================
-   AJUSTE FINAL DEL RESPONSIVE
-================================================ */
-
-@media(max-width:768px){
-
-    .hero{
-        height:90vh;
-    }
-
-    .hero-logo{
-        width:250px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero h2{
-        font-size:20px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-}
-
-
-/* ================================================
-   TARJETA DE EVENTO
-================================================ */
-
-.eventos-container{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
-
-.evento-card{
-
-    width:100%;
-    max-width:750px;
-
-    display:flex;
-    align-items:center;
-    gap:30px;
-
-    padding:30px;
-
-    border:2px solid #d4a017;
-    border-radius:20px;
-
-    background:rgba(0,0,0,.75);
-
-    box-shadow:
-        0 0 10px rgba(212,160,23,.4),
-        0 0 30px rgba(212,160,23,.15);
-
-}
-
-
-/* ================================================
-   FECHA
-================================================ */
-
-.evento-fecha{
-
-    min-width:120px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    border:2px solid #d4a017;
-    border-radius:15px;
-
-    padding:15px;
-
-    background:#000;
-
-}
-
-
-/* NÚMERO */
-
-.evento-fecha .dia{
-
-    display:block;
-
-    font-size:55px;
-    font-weight:900;
-    line-height:1;
-
-}
-
-
-/* MES */
-
-.evento-fecha .mes{
-
-    display:block;
-
-    font-size:22px;
-    font-weight:900;
-
-    margin-top:8px;
-}
-
-
-/* ================================================
-   INFORMACIÓN
-================================================ */
-
-.evento-info{
-    text-align:left;
-    flex:1;
-}
-
-.evento-info h3{
-
-    font-size:28px;
-    margin-bottom:12px;
-
-}
-
-.evento-info p{
-
-    font-size:16px;
-    line-height:1.7;
-    margin-bottom:12px;
-
-}
-
-
-/* FRASE */
-
-.evento-frase{
-
-    font-size:20px !important;
-    font-weight:900;
-
-}
-
-
-/* ================================================
-   EFECTO NEÓN FLUORESCENTE
-================================================ */
-
-/* TÍTULO */
-
-#eventos h2{
-
-    animation:neonTitulo 2s infinite alternate;
-
-}
-
-
-/* NOMBRE DEL LUGAR */
-
-#eventos .evento-info h3{
-
-    animation:neonLugar 2.5s infinite alternate;
-
-}
-
-
-/* TEXTOS */
-
-#eventos .evento-info p:not(.evento-frase){
-
-    animation:neonTexto 3s infinite alternate;
-
-}
-
-
-/* FECHA */
-
-#eventos .evento-fecha .dia,
-#eventos .evento-fecha .mes{
-
-    animation:neonFecha 1.5s infinite alternate;
-
-}
-
-
-/* FRASE BRAOO */
-
-#eventos .evento-frase{
-
-    animation:neonFrase 1.2s infinite alternate;
-
-}
-
-
-/* ================================================
-   ANIMACIÓN TÍTULO
-================================================ */
-
-@keyframes neonTitulo{
-
-    0%{
-
-        color:#d4a017;
-
-        text-shadow:
-        0 0 5px #d4a017,
-        0 0 15px #d4a017,
-        0 0 30px #d4a017;
-
-    }
-
-    50%{
-
-        color:#fff;
-
-        text-shadow:
-        0 0 5px #fff,
-        0 0 15px #fff,
-        0 0 35px #fff700,
-        0 0 60px #fff700;
-
-    }
-
-    100%{
-
-        color:#00ffff;
-
-        text-shadow:
-        0 0 5px #00ffff,
-        0 0 15px #00ffff,
-        0 0 30px #00ffff,
-        0 0 60px #00ffff;
-
-    }
-
-}
-
-
-/* ================================================
-   ANIMACIÓN NOMBRE DEL EVENTO
-================================================ */
-
-@keyframes neonLugar{
-
-    0%{
-
-        color:#00ffff;
-
-        text-shadow:
-        0 0 5px #00ffff,
-        0 0 15px #00ffff,
-        0 0 30px #00ffff;
-
-    }
-
-    50%{
-
-        color:#ff00ff;
-
-        text-shadow:
-        0 0 5px #ff00ff,
-        0 0 15px #ff00ff,
-        0 0 35px #ff00ff,
-        0 0 55px #ff00ff;
-
-    }
-
-    100%{
-
-        color:#fff700;
-
-        text-shadow:
-        0 0 5px #fff700,
-        0 0 15px #fff700,
-        0 0 30px #fff700;
-
-    }
-
-}
-
-
-/* ================================================
-   ANIMACIÓN TEXTOS
-================================================ */
-
-@keyframes neonTexto{
-
-    0%{
-
-        color:#fff;
-
-        text-shadow:
-        0 0 5px #fff,
-        0 0 10px #00ffff;
-
-    }
-
-    50%{
-
-        color:#00ffff;
-
-        text-shadow:
-        0 0 5px #00ffff,
-        0 0 15px #00ffff,
-        0 0 30px #00ffff;
-
-    }
-
-    100%{
-
-        color:#ffea00;
-
-        text-shadow:
-        0 0 5px #ffea00,
-        0 0 15px #ffea00,
-        0 0 30px #ffea00;
-
-    }
-
-}
-
-
-/* ================================================
-   ANIMACIÓN FECHA
-================================================ */
-
-@keyframes neonFecha{
-
-    0%{
-
-        color:#fff700;
-
-        text-shadow:
-        0 0 5px #fff700,
-        0 0 15px #fff700,
-        0 0 30px #fff700;
-
-    }
-
-    50%{
-
-        color:#ff6600;
-
-        text-shadow:
-        0 0 5px #ff6600,
-        0 0 15px #ff6600,
-        0 0 30px #ff6600,
-        0 0 50px #ff6600;
-
-    }
-
-    100%{
-
-        color:#fff;
-
-        text-shadow:
-        0 0 5px #fff,
-        0 0 15px #fff,
-        0 0 35px #fff;
-
-    }
-
-}
-
-
-/* ================================================
-   BRAOO PERO CON SABOR
-================================================ */
-
-@keyframes neonFrase{
-
-    0%{
-
-        color:#ff00ff;
-
-        text-shadow:
-        0 0 5px #ff00ff,
-        0 0 15px #ff00ff,
-        0 0 30px #ff00ff,
-        0 0 50px #ff00ff;
-
-    }
-
-    50%{
-
-        color:#00ffff;
-
-        text-shadow:
-        0 0 5px #00ffff,
-        0 0 15px #00ffff,
-        0 0 30px #00ffff,
-        0 0 60px #00ffff;
-
-    }
-
-    100%{
-
-        color:#fff700;
-
-        text-shadow:
-        0 0 5px #fff700,
-        0 0 15px #fff700,
-        0 0 30px #fff700,
-        0 0 60px #fff700;
-
-    }
-
-}
-
-
-/* ================================================
-   MÓVIL
-================================================ */
-
-@media(max-width:600px){
-
-    .evento-card{
-
-        flex-direction:column;
-        text-align:center;
-        padding:25px 15px;
-
-    }
-
-    .evento-info{
-
-        text-align:center;
-
-    }
-
-    .evento-fecha{
-
-        min-width:110px;
-
-    }
-
-    .evento-fecha .dia{
-
-        font-size:45px;
-
-    }
-
-    .evento-info h3{
-
-        font-size:23px;
-
-    }
-
-```css
-/* ========================================
-   BOTÓN DOSSIER
-======================================== */
-
-.btn-dossier{
-    display:inline-block;
-    background:#c62828;
-    color:#fff;
-    padding:14px 28px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-
-    /* Recupera el cuadro y separación */
-    border:2px solid #8b1c1c;
-    box-shadow:0 4px 12px rgba(0,0,0,.5);
-}
-
-.btn-dossier:hover{
-    background:#9e1f1f;
-    transform:translateY(-2px);
-}
-```
-```css
-/* ========================================
-   INTEGRANTES - 3 POR FILA
-======================================== */
-
-#integrantes{
-    width:100%;
-    padding:80px 20px;
-    text-align:center;
-}
-
-#integrantes h2{
-    margin-bottom:40px;
-}
-
-.members{
-
-    width:100%;
-
-    display:grid;
-
-    grid-template-columns:repeat(3, 300px);
-
-    justify-content:center;
-
-    align-items:start;
-
-    gap:40px;
-
-}
-
-.member-card{
-
-    width:300px;
-
-    text-align:center;
-
-}
-
-.member-card img{
-
-    width:100%;
-
-    display:block;
-
-    margin:auto;
-
-}
-
-
-/* ========================================
-   TABLET
-======================================== */
-
-@media(max-width:1000px){
-
-    .members{
-
-        grid-template-columns:repeat(2, 300px);
-
-    }
-
-}
-
-
-/* ========================================
-   CELULAR
-======================================== */
-
-@media(max-width:650px){
-
-    .members{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .member-card{
-
-        width:100%;
-        max-width:300px;
-        margin:auto;
-
-    }
-
-}
+/* ==================================================
+   EVENTO ANTIGUO / COMPATIBIL
 ```
 
 
