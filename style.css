@@ -1200,3 +1200,36 @@ footer img{
     box-sizing:border-box;
     text-align:center;
 }
+/* ==================================================
+   DOSSIER DEL CABEZAL - MISMO ESTILO QUE CONTRATACIONES
+================================================== */
+
+.hero .btn-dossier{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:280px;
+    min-height:60px;
+    box-sizing:border-box;
+
+    margin:30px auto;
+    padding:18px 20px;
+
+    background:#c62828;
+    color:#fff;
+    border:2px solid #e53935;
+    border-radius:8px;
+
+    text-decoration:none;
+    font-weight:bold;
+    text-align:center;
+
+    box-shadow:0 0 8px rgba(198,40,40,.5);
+    transition:all .3s ease;
+}
+
+.hero .btn-dossier:hover{
+    background:#9e1f1f;
+    transform:translateY(-2px);
+    box-shadow:0 0 15px rgba(229,57,53,.7);
+}
