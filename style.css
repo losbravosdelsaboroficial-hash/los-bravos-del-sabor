@@ -830,5 +830,92 @@ footer img{
     transform:translateY(-2px);
 }
 ```
+```css
+/* ========================================
+   INTEGRANTES - 3 POR FILA
+======================================== */
+
+#integrantes{
+    width:100%;
+    padding:80px 20px;
+    text-align:center;
+}
+
+#integrantes h2{
+    margin-bottom:40px;
+}
+
+.members{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3, 300px);
+
+    justify-content:center;
+
+    align-items:start;
+
+    gap:40px;
+
+}
+
+.member-card{
+
+    width:300px;
+
+    text-align:center;
+
+}
+
+.member-card img{
+
+    width:100%;
+
+    display:block;
+
+    margin:auto;
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media(max-width:1000px){
+
+    .members{
+
+        grid-template-columns:repeat(2, 300px);
+
+    }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media(max-width:650px){
+
+    .members{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .member-card{
+
+        width:100%;
+        max-width:300px;
+        margin:auto;
+
+    }
+
+}
+```
 
 
