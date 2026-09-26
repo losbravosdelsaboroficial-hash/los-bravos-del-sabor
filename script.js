@@ -26,13 +26,3 @@ window.addEventListener("scroll", () => {
     });
 
 });
-
-
-// ========================================
-// CONTADOR DE EVENTOS
-// ========================================
-
-// Por ahora dejamos el contador antiguo desactivado,
-// ya que el evento del 8 de agosto ya pasó.
-
-```
