@@ -1233,3 +1233,34 @@ footer img{
     transform:translateY(-2px);
     box-shadow:0 0 15px rgba(229,57,53,.7);
 }
+/* ==================================================
+   DOSSIER DEL CABEZAL IGUAL AL BOTÓN AMARILLO
+================================================== */
+
+.hero .btn-dossier{
+    display:inline-block;
+    width:auto;
+    min-width:200px;
+    padding:15px 35px;
+    margin-top:30px;
+
+    background:#c62828;
+    color:#fff;
+    border:2px solid #e53935;
+    border-radius:50px;
+
+    text-decoration:none;
+    font-weight:bold;
+    text-align:center;
+
+    box-sizing:border-box;
+
+    box-shadow:0 0 8px rgba(198,40,40,.5);
+    transition:.3s;
+}
+
+.hero .btn-dossier:hover{
+    background:#9e1f1f;
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(229,57,53,.7);
+}
