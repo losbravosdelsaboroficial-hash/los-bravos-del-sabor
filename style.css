@@ -543,150 +543,179 @@ font-size:20px;
 font-size:16px;
 
 }
+```css
+/* ==================================================
+   EFECTO NEÓN FLUORESCENTE
+   PRÓXIMOS EVENTOS
+================================================== */
 
-/* ========================================
-   LETRAS FLUORESCENTES / NEÓN
-   LOS BRAVOS DEL SABOR
-======================================== */
+/* TÍTULO PRINCIPAL */
+#eventos h2 {
+    color: #fff700 !important;
+    animation: neonTitulo 2s infinite alternate;
+}
 
-#eventos h2,
-#eventos h3,
+/* NOMBRE DEL EVENTO */
+#eventos h3 {
+    color: #00ffff !important;
+    animation: neonTexto 2.5s infinite alternate;
+}
+
+/* TEXTOS */
 #eventos p,
-#eventos strong,
-#eventos .evento-frase,
-#eventos .evento-lugar,
+#eventos .evento-lugar {
+    color: #ffffff !important;
+    animation: neonTexto 3s infinite alternate;
+}
+
+/* FECHA */
 #eventos .dia,
 #eventos .mes {
+    color: #fff700 !important;
+    animation: neonFecha 1.8s infinite alternate;
+}
 
-    animation: neonFosforescente 2.8s infinite alternate;
-
-    font-weight: 700;
-
-    /* Brillo exterior */
-    text-shadow:
-        0 0 5px currentColor,
-        0 0 10px currentColor,
-        0 0 20px currentColor,
-        0 0 35px currentColor;
-
+/* FRASE BRAOO */
+#eventos .evento-frase {
+    color: #ff00ff !important;
+    font-weight: 900;
+    animation: neonFrase 1.5s infinite alternate;
 }
 
 
-/* ========================================
-   CAMBIO DE COLORES + INTENSIDAD
-======================================== */
+/* ==================================================
+   BRILLO DEL TÍTULO
+================================================== */
 
-@keyframes neonFosforescente {
+@keyframes neonTitulo {
 
     0% {
-        color: #d4a017;
-
-        text-shadow:
-            0 0 5px #d4a017,
-            0 0 10px #d4a017,
-            0 0 20px #d4a017,
-            0 0 35px #d4a017;
-
-        opacity: 1;
-    }
-
-    20% {
-        color: #fff700;
-
+        color: #fff700 !important;
         text-shadow:
             0 0 5px #fff700,
             0 0 10px #fff700,
-            0 0 25px #fff700,
-            0 0 45px #fff700;
-
-        opacity: 0.95;
+            0 0 20px #fff700,
+            0 0 40px #fff700;
     }
 
-    40% {
-        color: #ffffff;
-
+    50% {
+        color: #ffffff !important;
         text-shadow:
             0 0 5px #ffffff,
             0 0 15px #ffffff,
-            0 0 30px #ffffff,
-            0 0 50px #ffffff;
-
-        opacity: 1;
+            0 0 30px #fff700,
+            0 0 60px #fff700;
     }
 
-    60% {
-        color: #ffb300;
-
+    100% {
+        color: #00ffff !important;
         text-shadow:
-            0 0 5px #ffb300,
-            0 0 15px #ffb300,
-            0 0 30px #ffb300,
-            0 0 50px #ffb300;
+            0 0 5px #00ffff,
+            0 0 15px #00ffff,
+            0 0 30px #00ffff,
+            0 0 60px #00ffff;
+    }
+}
 
-        opacity: 0.9;
+
+/* ==================================================
+   BRILLO DE TEXTOS
+================================================== */
+
+@keyframes neonTexto {
+
+    0% {
+        color: #ffffff !important;
+        text-shadow:
+            0 0 3px #ffffff,
+            0 0 8px #00ffff;
     }
 
-    80% {
-        color: #ffea00;
+    50% {
+        color: #00ffff !important;
+        text-shadow:
+            0 0 5px #00ffff,
+            0 0 15px #00ffff,
+            0 0 30px #00ffff;
+    }
 
+    100% {
+        color: #ffea00 !important;
         text-shadow:
             0 0 5px #ffea00,
             0 0 15px #ffea00,
             0 0 30px #ffea00,
-            0 0 55px #ffea00;
+            0 0 50px #ffea00;
+    }
+}
 
-        opacity: 1;
+
+/* ==================================================
+   FECHA NEÓN
+================================================== */
+
+@keyframes neonFecha {
+
+    0% {
+        color: #fff700 !important;
+        text-shadow:
+            0 0 5px #fff700,
+            0 0 15px #fff700,
+            0 0 30px #fff700;
+    }
+
+    50% {
+        color: #ff6600 !important;
+        text-shadow:
+            0 0 5px #ff6600,
+            0 0 15px #ff6600,
+            0 0 30px #ff6600,
+            0 0 50px #ff6600;
     }
 
     100% {
-        color: #d4a017;
-
+        color: #ffffff !important;
         text-shadow:
-            0 0 5px #d4a017,
-            0 0 10px #d4a017,
-            0 0 20px #d4a017,
-            0 0 35px #d4a017;
-
-        opacity: 1;
+            0 0 5px #ffffff,
+            0 0 15px #ffffff,
+            0 0 30px #ffffff;
     }
 }
 
 
-/* ========================================
-   BRAOO PERO CON SABOR
-   MÁS BRILLANTE
-======================================== */
+/* ==================================================
+   FRASE BRAOO - EFECTO MÁS FUERTE
+================================================== */
 
-#eventos .evento-frase {
+@keyframes neonFrase {
 
-    font-size: 1.3rem;
-    font-weight: 900;
-
-    animation:
-        neonFosforescente 1.8s infinite alternate,
-        parpadeoNeon 2.5s infinite;
-
-}
-
-
-/* ========================================
-   PARPADEO SUAVE DE LUZ
-======================================== */
-
-@keyframes parpadeoNeon {
-
-    0%, 18%, 22%, 63%, 65%, 100% {
-        opacity: 1;
+    0% {
+        color: #ff00ff !important;
+        text-shadow:
+            0 0 5px #ff00ff,
+            0 0 15px #ff00ff,
+            0 0 30px #ff00ff,
+            0 0 50px #ff00ff;
     }
 
-    20%, 64% {
-        opacity: 0.65;
+    50% {
+        color: #00ffff !important;
+        text-shadow:
+            0 0 5px #00ffff,
+            0 0 15px #00ffff,
+            0 0 30px #00ffff,
+            0 0 60px #00ffff;
     }
 
+    100% {
+        color: #fff700 !important;
+        text-shadow:
+            0 0 5px #fff700,
+            0 0 15px #fff700,
+            0 0 30px #fff700,
+            0 0 60px #fff700;
+    }
 }
 ```
 
-
-}
-    
     
