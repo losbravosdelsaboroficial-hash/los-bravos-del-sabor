@@ -1419,8 +1419,33 @@ footer img{
     font-size:12px;
 }
 
-.campo-bravada input{
+.campo-bravada input,
+.campo-bravada select{
     width:100%;
+    padding:13px;
+    box-sizing:border-box;
+    background:#151515;
+    color:#fff;
+    border:1px solid #555;
+    border-radius:8px;
+    font-family:'Montserrat',sans-serif;
+}
+
+.campo-bravada select{
+    appearance:auto;
+    cursor:pointer;
+}
+
+.campo-bravada input:focus,
+.campo-bravada select:focus{
+    outline:none;
+    border-color:#d4af37;
+    box-shadow:0 0 8px rgba(212,175,55,.25);
+}
+
+/* compatibilidad con reglas anteriores */
+.campo-bravada input{
+
     padding:13px;
     box-sizing:border-box;
     background:#151515;
