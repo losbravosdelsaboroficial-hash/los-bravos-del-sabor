@@ -1298,6 +1298,53 @@ footer img{
     line-height:1.6;
 }
 
+.bravada-contador{
+    margin-top:18px;
+    padding-top:15px;
+    border-top:1px solid rgba(212,175,55,.35);
+}
+
+.contador-label{
+    display:block;
+    color:#aaa;
+    font-size:12px;
+    letter-spacing:1.5px;
+    margin-bottom:5px;
+}
+
+.bravada-contador > strong{
+    display:block;
+    color:#fff;
+    font-size:30px;
+    font-family:'Cinzel',serif;
+    margin-bottom:12px;
+}
+
+.contador-barra{
+    width:100%;
+    max-width:420px;
+    height:12px;
+    margin:0 auto 10px;
+    background:#222;
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.contador-progreso{
+    width:0%;
+    height:100%;
+    background:#d4af37;
+    border-radius:20px;
+    transition:width .6s ease;
+}
+
+.contador-cupos{
+    display:block !important;
+    color:#d4af37 !important;
+    font-size:13px;
+}
+
 .bravada-especial span strong{
     color:#d4af37;
 }
