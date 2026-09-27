@@ -254,7 +254,46 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 </section>
 
+<!-- ================================
+     LA BRAVADA - FANS OFICIALES
+================================ -->
 
+<section class="section reveal" id="bravada">
+
+    <div class="bravada-card">
+
+        <div class="bravada-icon">
+            🔥
+        </div>
+
+        <h2>LA BRAVADA</h2>
+
+        <h3>La comunidad oficial de fans de Los Bravos del Sabor</h3>
+
+        <p>
+            Sé parte de nuestra familia y acompáñanos en cada escenario,
+            evento y nuevo proyecto.
+        </p>
+
+        <div class="bravada-especial">
+
+            <strong>🔥 PRIMERAS 100 PERSONAS 🔥</strong>
+
+            <span>
+                Las primeras 100 personas inscritas recibirán
+                una <strong>Credencial Especial de Fan de
+                Los Bravos del Sabor.</strong>
+            </span>
+
+        </div>
+
+        <button class="btn-bravada" onclick="abrirBravada()">
+            🔥 QUIERO SER PARTE DE LA BRAVADA
+        </button>
+
+    </div>
+
+</section>
 <!-- ================================
      GALERÍA
 ================================ -->
@@ -463,7 +502,162 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 </footer>
 
+<!-- ================================
+     MODAL LA BRAVADA
+================================ -->
 
+<div id="modalBravada" class="modal-bravada">
+
+    <div class="modal-bravada-contenido">
+
+        <button class="cerrar-bravada" onclick="cerrarBravada()">
+            ×
+        </button>
+
+        <div class="bravada-modal-icon">
+            🔥
+        </div>
+
+        <h2>ÚNETE A LA BRAVADA</h2>
+
+        <p class="bravada-modal-subtitulo">
+            Completa tus datos para formar parte de
+            la comunidad oficial de fans.
+        </p>
+
+        <div class="cupos-bravada">
+
+            <span>🔥 CUPOS ESPECIALES</span>
+
+            <strong>
+                PRIMERAS 100 PERSONAS
+            </strong>
+
+        </div>
+
+        <form id="formBravada">
+
+            <div class="campo-bravada">
+
+                <label for="nombreFan">
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="nombreFan"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo-bravada">
+
+                <label for="apellidoFan">
+                    Apellido
+                </label>
+
+                <input
+                    type="text"
+                    id="apellidoFan"
+                    name="apellido"
+                    placeholder="Escribe tu apellido"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo-bravada">
+
+                <label for="comunaFan">
+                    Comuna / Ciudad
+                </label>
+
+                <input
+                    type="text"
+                    id="comunaFan"
+                    name="comuna"
+                    placeholder="Ej: San Vicente de Tagua Tagua"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo-bravada">
+
+                <label for="whatsappFan">
+                    WhatsApp
+                </label>
+
+                <input
+                    type="tel"
+                    id="whatsappFan"
+                    name="whatsapp"
+                    placeholder="+56 9 XXXXXXXX"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo-bravada">
+
+                <label for="instagramFan">
+                    Instagram
+                    <span>(opcional)</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="instagramFan"
+                    name="instagram"
+                    placeholder="@tuusuario"
+                >
+
+            </div>
+
+
+            <div class="check-bravada">
+
+                <input
+                    type="checkbox"
+                    id="aceptoBravada"
+                    required
+                >
+
+                <label for="aceptoBravada">
+
+                    Acepto formar parte de la comunidad
+                    de fans de Los Bravos del Sabor.
+
+                </label>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn-enviar-bravada">
+
+                🔥 INSCRIBIRME EN LA BRAVADA
+
+            </button>
+
+        </form>
+
+        <div
+            id="mensajeBravada"
+            class="mensaje-bravada">
+        </div>
+
+    </div>
+
+</div>
 <!-- ================================
      LIGHTBOX
 ================================ -->
