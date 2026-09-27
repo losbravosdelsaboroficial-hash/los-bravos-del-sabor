@@ -1232,3 +1232,512 @@ footer img{
     transform:scale(1.05);
     box-shadow:0 0 15px rgba(229,57,53,.7);
 }
+/* ========================================
+   LA BRAVADA
+======================================== */
+
+.bravada-card {
+
+    max-width: 850px;
+
+    margin: 40px auto;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.90),
+            rgba(0,0,0,0.96)
+        );
+
+    border: 2px solid #d4af37;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,0.25);
+
+}
+
+
+.bravada-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.bravada-card h2 {
+
+    margin-bottom: 10px;
+
+    color: #d4af37;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 38px;
+
+}
+
+
+.bravada-card h3 {
+
+    margin-bottom: 18px;
+
+    color: #fff;
+
+    font-size: 20px;
+
+}
+
+
+.bravada-card p {
+
+    color: #ddd;
+
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.7;
+
+}
+
+
+/* AVISO PRIMERAS 100 */
+
+.bravada-especial {
+
+    max-width: 600px;
+
+    margin: 25px auto;
+
+    padding: 20px;
+
+    border: 1px solid #d4af37;
+
+    border-radius: 12px;
+
+    background:
+        rgba(212,175,55,0.08);
+
+}
+
+
+.bravada-especial strong {
+
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.bravada-especial span {
+
+    display: block;
+
+    color: #fff;
+
+    line-height: 1.6;
+
+}
+
+
+/* BOTÓN */
+
+.btn-bravada {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 15px 25px;
+
+    background: #d4af37;
+
+    color: #000;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.btn-bravada:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(212,175,55,0.30);
+
+}
+
+
+/* ========================================
+   MODAL BRAVADA
+======================================== */
+
+.modal-bravada {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow-y: auto;
+
+    background:
+        rgba(0,0,0,0.82);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+.modal-bravada-contenido {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 550px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111,
+            #050505
+        );
+
+    border: 2px solid #d4af37;
+
+    border-radius: 18px;
+
+    padding: 35px 30px;
+
+    box-shadow:
+        0 0 35px rgba(212,175,55,0.35);
+
+}
+
+
+.cerrar-bravada {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 10px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #d4af37;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+}
+
+
+.bravada-modal-icon {
+
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.modal-bravada-contenido h2 {
+
+    text-align: center;
+
+    color: #d4af37;
+
+    font-family: 'Cinzel', serif;
+
+    margin-bottom: 10px;
+
+}
+
+
+.bravada-modal-subtitulo {
+
+    text-align: center;
+
+    color: #ddd;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* CUPOS */
+
+.cupos-bravada {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(212,175,55,0.10);
+
+    border: 1px solid rgba(212,175,55,0.45);
+
+}
+
+
+.cupos-bravada span {
+
+    display: block;
+
+    color: #d4af37;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+}
+
+
+.cupos-bravada strong {
+
+    color: #fff;
+
+    font-size: 18px;
+
+}
+
+
+/* CAMPOS */
+
+.campo-bravada {
+
+    margin-bottom: 17px;
+
+}
+
+
+.campo-bravada label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #fff;
+
+    font-weight: 600;
+
+}
+
+
+.campo-bravada label span {
+
+    font-size: 12px;
+
+    color: #aaa;
+
+}
+
+
+.campo-bravada input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    border: 1px solid #555;
+
+    background: #151515;
+
+    color: #fff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    box-sizing: border-box;
+
+}
+
+
+.campo-bravada input:focus {
+
+    outline: none;
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 8px rgba(212,175,55,0.25);
+
+}
+
+
+/* CHECK */
+
+.check-bravada {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    color: #ddd;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+.check-bravada input {
+
+    margin-top: 3px;
+
+}
+
+
+/* BOTÓN ENVIAR */
+
+.btn-enviar-bravada {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 15px;
+
+    background: #d4af37;
+
+    color: #000;
+
+    font-weight: 800;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.btn-enviar-bravada:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(212,175,55,0.25);
+
+}
+
+
+/* MENSAJE */
+
+.mensaje-bravada {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    color: #fff;
+
+    background: rgba(212,175,55,0.12);
+
+    border: 1px solid #d4af37;
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    .bravada-card {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .bravada-card h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .bravada-card h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .modal-bravada {
+
+        padding: 10px;
+
+    }
+
+
+    .modal-bravada-contenido {
+
+        padding: 30px 20px;
+
+    }
+
+}
