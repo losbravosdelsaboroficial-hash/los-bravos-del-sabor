@@ -166,6 +166,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 .value
                 .trim();
 
+        const motivo =
+            document.getElementById("motivoFan")
+                .value
+                .trim();
+
         if (mensaje) {
 
             mensaje.style.display = "block";
