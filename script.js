@@ -190,6 +190,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     "🔥 INSCRIBIRME EN LA BRAVADA";
             }
 
+            // Cerrar automáticamente la ventana
+            // después de confirmar la inscripción.
+            setTimeout(function() {
+                cerrarBravada();
+            }, 1800);
+
         }, 1200);
 
         // NO usamos preventDefault().
