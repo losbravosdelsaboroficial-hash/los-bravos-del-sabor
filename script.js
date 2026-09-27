@@ -133,22 +133,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const formulario =
         document.getElementById("formBravada");
 
-    const iframe =
-        document.getElementById("bravadaFrame");
-
     if (!formulario) {
         return;
     }
 
-    let envioEnCurso = false;
-
-    function finalizarInscripcion() {
-
-        if (!envioEnCurso) {
-            return;
-        }
-
-        envioEnCurso = false;
+    formulario.addEventListener("submit", function() {
 
         const mensaje =
             document.getElementById("mensajeBravada");
@@ -166,66 +155,59 @@ document.addEventListener("DOMContentLoaded", function() {
                 .value
                 .trim();
 
-        const motivo =
-            document.getElementById("motivoFan")
-                .value
-                .trim();
-
-        if (mensaje) {
-
-            mensaje.style.display = "block";
-
-            mensaje.innerHTML = `
-                🔥 <strong>¡Inscripción recibida!</strong>
-                <br><br>
-                Bienvenido a La Bravada,
-                <strong>${nombre} ${apellido}</strong>.
-                <br><br>
-                Tus datos fueron registrados correctamente.
-            `;
-        }
-
-        formulario.reset();
-
-        if (boton) {
-            boton.disabled = false;
-            boton.textContent =
-                "🔥 INSCRIBIRME EN LA BRAVADA";
-        }
-
-        setTimeout(function() {
-            cerrarBravada();
-        }, 1400);
-    }
-
-
-    // El iframe se carga cuando Apps Script recibe
-    // el envío del formulario.
-    if (iframe) {
-
-        iframe.addEventListener("load", function() {
-
-            finalizarInscripcion();
-
-        });
-
-    }
-
-
-    formulario.addEventListener("submit", function() {
-
-        envioEnCurso = true;
-
-        const boton =
-            formulario.querySelector(".btn-enviar-bravada");
 
         if (boton) {
             boton.disabled = true;
             boton.textContent = "ENVIANDO...";
         }
 
-        // No usamos preventDefault().
-        // El formulario realiza el POST directamente.
+
+        // El navegador envía el formulario directamente
+        // al Apps Script mediante POST.
+
+
+        // Mostramos la confirmación después de dar
+        // tiempo al formulario para enviarse.
+
+        setTimeout(function() {
+
+            if (mensaje) {
+
+                mensaje.style.display = "block";
+
+                mensaje.innerHTML = `
+                    🔥 <strong>¡Inscripción recibida!</strong>
+                    <br><br>
+                    Bienvenido a La Bravada,
+                    <strong>${nombre} ${apellido}</strong>.
+                    <br><br>
+                    Tus datos fueron enviados correctamente.
+                `;
+
+            }
+
+        }, 900);
+
+
+        // Cerramos la ventana automáticamente.
+
+        setTimeout(function() {
+
+            formulario.reset();
+
+            cerrarBravada();
+
+            if (boton) {
+
+                boton.disabled = false;
+
+                boton.textContent =
+                    "🔥 INSCRIBIRME EN LA BRAVADA";
+
+            }
+
+        }, 2300);
+
     });
 
 });
