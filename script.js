@@ -50,6 +50,7 @@ window.addEventListener("scroll", activarReveal);
 
 // Ejecutar también al cargar
 window.addEventListener("load", activarReveal);
+document.addEventListener("DOMContentLoaded", activarReveal);
 
 
 // ========================================
@@ -198,7 +199,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 ${nombre} ${apellido}.
 
                 <br><br>
-
                 Pronto podrás recibir información
                 sobre la comunidad oficial de
                 Los Bravos del Sabor.
