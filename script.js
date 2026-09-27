@@ -125,6 +125,166 @@ document.addEventListener("keydown", function(event) {
 
 
 // ========================================
+// CONTADOR LA BRAVADA
+// ========================================
+
+const URL_LA_BRAVADA =
+    "https://script.google.com/macros/s/AKfycbxvGnBVqf54ftMX90XajGd8cIqIhS2oIlxHI-VwEA9S0Z9U9CVFxZnmwXrH8-mmehM/exec";
+
+
+function actualizarContadorBravada(data) {
+
+    const contador =
+        document.getElementById("contadorBravada");
+
+    const barra =
+        document.getElementById("barraBravada");
+
+    const texto =
+        document.getElementById("textoCuposBravada");
+
+
+    if (!contador || !barra || !texto) {
+        return;
+    }
+
+
+    const inscritos =
+        Math.max(0, Number(data.inscritos || 0));
+
+    const limite = 100;
+
+    const porcentaje =
+        Math.min(100, (inscritos / limite) * 100);
+
+    const disponibles =
+        Math.max(0, limite - inscritos);
+
+
+    contador.textContent =
+        inscritos + " / " + limite;
+
+    barra.style.width =
+        porcentaje + "%";
+
+
+    if (inscritos >= limite) {
+
+        texto.textContent =
+            "🎉 ¡Las 100 credenciales especiales ya fueron completadas!";
+
+    } else {
+
+        texto.textContent =
+            "🔥 Quedan " +
+            disponibles +
+            " credenciales especiales disponibles.";
+
+    }
+
+}
+
+
+function cargarContadorBravada() {
+
+    const script =
+        document.createElement("script");
+
+    const callback =
+        "actualizarContadorBravada";
+
+    script.src =
+        URL_LA_BRAVADA +
+        "?count=1&callback=" +
+        callback +
+        "&t=" +
+        Date.now();
+
+    script.async = true;
+
+    document.body.appendChild(script);
+
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    cargarContadorBravada
+);
+
+
+// ========================================
+// LA BRAVADA
+// ========================================
+
+function abrirBravada() {
+
+    const modal =
+        document.getElementById("modalBravada");
+
+    if (!modal) {
+        return;
+    }
+
+    modal.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function cerrarBravada() {
+
+    const modal =
+        document.getElementById("modalBravada");
+
+    if (!modal) {
+        return;
+    }
+
+    modal.style.display = "none";
+
+    document.body.style.overflow = "";
+}
+
+
+// ========================================
+// CERRAR MODAL AL HACER CLIC AFUERA
+// ========================================
+
+window.addEventListener("click", function(event) {
+
+    const modal =
+        document.getElementById("modalBravada");
+
+    if (!modal) {
+        return;
+    }
+
+    if (event.target === modal) {
+
+        cerrarBravada();
+
+    }
+
+});
+
+
+// ========================================
+// CERRAR MODAL CON ESC
+// ========================================
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        cerrarBravada();
+
+    }
+
+});
+
+
+// ========================================
 // FORMULARIO LA BRAVADA
 // ========================================
 
@@ -136,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!formulario) {
         return;
     }
+
 
     formulario.addEventListener("submit", function() {
 
@@ -157,17 +318,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         if (boton) {
+
             boton.disabled = true;
-            boton.textContent = "ENVIANDO...";
+
+            boton.textContent =
+                "ENVIANDO...";
+
         }
 
-
-        // El navegador envía el formulario directamente
-        // al Apps Script mediante POST.
-
-
-        // Mostramos la confirmación después de dar
-        // tiempo al formulario para enviarse.
 
         setTimeout(function() {
 
@@ -189,8 +347,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 900);
 
 
-        // Cerramos la ventana automáticamente.
-
         setTimeout(function() {
 
             formulario.reset();
@@ -205,6 +361,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     "🔥 INSCRIBIRME EN LA BRAVADA";
 
             }
+
+            // Actualizar contador inmediatamente
+            // después de una nueva inscripción.
+            setTimeout(
+                cargarContadorBravada,
+                300
+            );
 
         }, 2300);
 
