@@ -128,6 +128,10 @@ document.addEventListener("keydown", function(event) {
 // FORMULARIO LA BRAVADA
 // ========================================
 
+const URL_LA_BRAVADA =
+    "https://script.google.com/macros/s/AKfycbxvGnBVqf54ftMX90XajGd8cIqIhS2oIlxHI-VwEA9S0Z9U9CVFxZnmwXrH8-mmehM/exec";
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const formulario =
@@ -138,88 +142,125 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    formulario.addEventListener(
-        "submit",
-        function(event) {
+    formulario.addEventListener("submit", async function(event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
 
-            const nombre =
-                document.getElementById("nombreFan")
+        const nombre =
+            document.getElementById("nombreFan")
                 .value
                 .trim();
 
-
-            const apellido =
-                document.getElementById("apellidoFan")
+        const apellido =
+            document.getElementById("apellidoFan")
                 .value
                 .trim();
 
-
-            const comuna =
-                document.getElementById("comunaFan")
+        const comuna =
+            document.getElementById("comunaFan")
                 .value
                 .trim();
 
-
-            const whatsapp =
-                document.getElementById("whatsappFan")
+        const whatsapp =
+            document.getElementById("whatsappFan")
                 .value
                 .trim();
 
-
-            const instagram =
-                document.getElementById("instagramFan")
+        const instagram =
+            document.getElementById("instagramFan")
                 .value
                 .trim();
 
+        const mensaje =
+            document.getElementById("mensajeBravada");
 
-            const mensaje =
-                document.getElementById("mensajeBravada");
+        const boton =
+            formulario.querySelector(".btn-enviar-bravada");
 
 
-            if (!mensaje) {
-                return;
-            }
+        if (!mensaje) {
+            return;
+        }
+
+
+        if (boton) {
+            boton.disabled = true;
+            boton.textContent = "ENVIANDO...";
+        }
+
+
+        const datos = new URLSearchParams();
+
+        datos.append("nombre", nombre);
+        datos.append("apellido", apellido);
+        datos.append("comuna", comuna);
+        datos.append("whatsapp", whatsapp);
+        datos.append("instagram", instagram);
+
+
+        try {
+
+            await fetch(URL_LA_BRAVADA, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type":
+                        "application/x-www-form-urlencoded;charset=UTF-8"
+                },
+                body: datos.toString()
+            });
 
 
             mensaje.style.display = "block";
 
-
             mensaje.innerHTML = `
-
-                🔥 <strong>
-                    ¡Bienvenido a La Bravada!
-                </strong>
-
+                🔥 <strong>¡Inscripción recibida!</strong>
                 <br><br>
-
-                Hemos recibido tus datos,
-                ${nombre} ${apellido}.
-
+                Bienvenido a La Bravada,
+                <strong>${nombre} ${apellido}</strong>.
                 <br><br>
-                Pronto podrás recibir información
-                sobre la comunidad oficial de
-                Los Bravos del Sabor.
-
+                Tus datos fueron enviados correctamente.
+                <br>
+                Muy pronto podrás conocer las novedades
+                y beneficios de nuestra comunidad de fans.
             `;
-
-
-            console.log("Nuevo fan:", {
-
-                nombre,
-                apellido,
-                comuna,
-                whatsapp,
-                instagram
-
-            });
 
 
             formulario.reset();
 
+
+        } catch (error) {
+
+            console.error(
+                "Error al enviar inscripción:",
+                error
+            );
+
+
+            mensaje.style.display = "block";
+
+            mensaje.innerHTML = `
+                ⚠️ <strong>No pudimos enviar tu inscripción.</strong>
+                <br><br>
+                Revisa tu conexión a internet
+                e inténtalo nuevamente.
+            `;
+
+
+        } finally {
+
+            if (boton) {
+
+                boton.disabled = false;
+
+                boton.textContent =
+                    "🔥 INSCRIBIRME EN LA BRAVADA";
+
+            }
+
         }
-    );
+
+    });
 
 });
