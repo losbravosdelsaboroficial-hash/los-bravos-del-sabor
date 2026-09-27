@@ -394,7 +394,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <button
             type="button"
             class="btn-bravada"
-            onclick="abrirBravada()"
+            onclick="document.getElementById('modalBravada').style.display='flex'; document.body.style.overflow='hidden';"
         >
             🔥 QUIERO SER PARTE DE LA BRAVADA
 
@@ -788,7 +788,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <button
             type="button"
             class="cerrar-bravada"
-            onclick="cerrarBravada()"
+            onclick="document.getElementById('modalBravada').style.display='none'; document.body.style.overflow='';"
             aria-label="Cerrar"
         >
             ×
