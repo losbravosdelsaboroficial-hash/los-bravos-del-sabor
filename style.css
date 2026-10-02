@@ -1640,3 +1640,68 @@ opacity: 1;
 
 
 }
+/* =========================================
+BLOQUE EVENTO SUSPENDIDO
+========================================= */
+
+.evento-bloque-suspendido {
+width: 100%;
+max-width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* Texto SUSPENDIDO encima del cuadro */
+
+.evento-bloque-suspendido .evento-suspendido {
+width: 100%;
+text-align: center;
+
+```
+color: #ff0000;
+font-size: 2rem;
+font-weight: 900;
+letter-spacing: 3px;
+
+margin: 0 0 12px 0;
+padding: 0;
+
+text-shadow:
+    0 0 5px rgba(255, 0, 0, 0.9),
+    0 0 15px rgba(255, 0, 0, 0.7);
+
+animation: parpadeoSuspendido 0.8s infinite;
+```
+
+}
+
+/* Parpadeo */
+
+@keyframes parpadeoSuspendido {
+
+```
+0%, 45% {
+    opacity: 1;
+}
+
+50%, 100% {
+    opacity: 0.15;
+}
+```
+
+}
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+```
+.evento-bloque-suspendido .evento-suspendido {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+```
+
+}
