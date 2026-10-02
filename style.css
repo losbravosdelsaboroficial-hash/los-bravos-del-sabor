@@ -1588,44 +1588,55 @@ footer img{
 AVISO EVENTO SUSPENDIDO
 ========================================= */
 
-.evento-suspendido {
-display: block;
+.eventos-container .evento-suspendido {
 width: 100%;
+flex-basis: 100%;
+display: block;
+box-sizing: border-box;
 text-align: center;
+
 color: #ff0000;
 font-size: 2rem;
 font-weight: 900;
 letter-spacing: 3px;
-margin-bottom: 15px;
+
+margin: 0 0 15px 0;
+padding: 5px 0;
+
 text-shadow:
-0 0 5px rgba(255, 0, 0, 0.8),
-0 0 15px rgba(255, 0, 0, 0.6);
+    0 0 5px rgba(255, 0, 0, 0.8),
+    0 0 15px rgba(255, 0, 0, 0.6);
+
 animation: parpadeoSuspendido 0.9s infinite;
+
+
 }
 
 /* Parpadeo */
+
 @keyframes parpadeoSuspendido {
 0%, 45% {
 opacity: 1;
 }
 
-```
+
 50%, 100% {
     opacity: 0.15;
 }
-```
+
 
 }
 
-/* Ajuste para celulares */
+/* Celulares */
+
 @media (max-width: 600px) {
 
-```
-.evento-suspendido {
+
+.eventos-container .evento-suspendido {
     font-size: 1.5rem;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
-```
+
 
 }
