@@ -1960,3 +1960,109 @@ animation: parpadeoSuspendido 0.8s infinite;
     text-shadow:0 0 14px rgba(181,31,50,.35);
     animation:none;
 }
+
+
+/* ==================================================
+   AJUSTE ESPECIAL TELETÓN: SOLIDARIO, CÁLIDO Y SIN NEÓN
+================================================== */
+#eventos.eventos-solidarios{
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(180,25,45,.13), transparent 52%),
+        linear-gradient(180deg,#100d0d 0%,#171010 55%,#0b0909 100%) !important;
+}
+#eventos h2,
+#eventos .eventos-solidarios-cabecera h2{
+    animation:none !important;
+    text-shadow:none !important;
+}
+#eventos .eventos-solidarios-cabecera h2{
+    color:#f3d27b !important;
+}
+#eventos .eventos-solidarios-cabecera h2.eventos-subtitulo-teleton{
+    color:#fff !important;
+}
+#eventos h3,
+#eventos .eventos-solidarios-cabecera h3{
+    animation:none !important;
+    color:#fff !important;
+    text-shadow:none !important;
+}
+#eventos .eventos-etiqueta{
+    background:#fff !important;
+    color:#a91f32 !important;
+    border:1px solid #fff !important;
+    box-shadow:none !important;
+}
+#eventos .eventos-corazon{
+    color:#d52d43 !important;
+    filter:none !important;
+    animation:none !important;
+}
+#eventos .teleton-campana{
+    display:inline-flex;
+    align-items:center;
+    gap:13px;
+    margin:24px auto 25px;
+    padding:12px 20px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.65);
+    background:#fff;
+    color:#a51f32;
+    box-shadow:0 5px 18px rgba(0,0,0,.18);
+    text-align:left;
+}
+#eventos .teleton-campana-icono{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    background:#b51f32;
+    color:#fff;
+    font-size:1.35rem;
+}
+#eventos .teleton-campana-texto{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+#eventos .teleton-campana-texto strong{
+    font-family:'Montserrat',sans-serif;
+    font-size:1.25rem;
+    line-height:1.1;
+    letter-spacing:1.5px;
+    color:#a51f32;
+}
+#eventos .teleton-campana-texto small{
+    font-size:.65rem;
+    font-weight:800;
+    letter-spacing:1.1px;
+    color:#333;
+}
+#eventos .evento-card.evento-teleton{
+    box-shadow:0 6px 18px rgba(0,0,0,.22) !important;
+}
+#eventos .evento-card.evento-teleton:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.25) !important;
+}
+#eventos .evento-tipo-solidario,
+#eventos .evento-teleton .evento-info .evento-lugar{
+    color:#f3d27b !important;
+    text-shadow:none !important;
+}
+#eventos .evento-teleton .evento-info .evento-frase{
+    color:#f4c5ca !important;
+    text-shadow:none !important;
+}
+#eventos .eventos-solidarios-cierre,
+#eventos .eventos-solidarios-cierre p,
+#eventos .eventos-solidarios-cierre span{
+    text-shadow:none !important;
+}
+@media(max-width:600px){
+    #eventos .teleton-campana{padding:10px 14px;gap:10px;}
+    #eventos .teleton-campana-icono{width:38px;height:38px;}
+    #eventos .teleton-campana-texto strong{font-size:1.1rem;}
+    #eventos .teleton-campana-texto small{font-size:.58rem;letter-spacing:.6px;}
+}
