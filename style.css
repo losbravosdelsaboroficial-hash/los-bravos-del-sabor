@@ -1705,3 +1705,247 @@ animation: parpadeoSuspendido 0.8s infinite;
 ```
 
 }
+
+
+/* ==================================================
+   EVENTOS SOLIDARIOS · ESPECIAL TELETÓN 2026
+   Mantiene la identidad negra y dorada de la banda
+   con acentos cálidos de solidaridad.
+================================================== */
+
+#eventos.eventos-solidarios{
+    position:relative;
+    isolation:isolate;
+    padding:90px 24px 75px;
+    overflow:hidden;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(190,28,52,.20), transparent 48%),
+        linear-gradient(180deg, rgba(0,0,0,.96), rgba(14,8,8,.97) 55%, rgba(0,0,0,.98));
+    border-top:1px solid rgba(212,160,23,.55);
+    border-bottom:1px solid rgba(212,160,23,.35);
+}
+
+#eventos.eventos-solidarios::before,
+#eventos.eventos-solidarios::after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    width:260px;
+    height:260px;
+    border:1px solid rgba(212,160,23,.14);
+    border-radius:50%;
+    pointer-events:none;
+}
+
+#eventos.eventos-solidarios::before{top:30px;left:-150px;}
+#eventos.eventos-solidarios::after{right:-150px;bottom:20px;}
+
+.eventos-solidarios-cabecera{
+    max-width:900px;
+    margin:0 auto 42px;
+    text-align:center;
+}
+
+.eventos-etiqueta{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:8px 16px;
+    border:1px solid rgba(212,160,23,.75);
+    border-radius:30px;
+    color:#ffe3a0;
+    background:rgba(181,31,50,.18);
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+#eventos .eventos-solidarios-cabecera h2{
+    margin:22px 0 12px;
+    color:#f4d276;
+    font-family:'Cinzel',serif;
+    font-size:clamp(1.65rem,4vw,2.8rem);
+    line-height:1.25;
+    text-shadow:0 0 18px rgba(212,160,23,.24);
+    animation:none;
+}
+
+#eventos .eventos-solidarios-cabecera h3{
+    margin:0 0 18px;
+    color:#fff;
+    font-size:clamp(1rem,2.3vw,1.35rem);
+    letter-spacing:1.5px;
+    animation:none;
+}
+
+.eventos-solidarios-cabecera > p{
+    max-width:740px;
+    margin:0 auto;
+    color:#e8e2df;
+    font-size:1rem;
+    line-height:1.85;
+}
+
+.eventos-corazon{
+    margin-top:22px;
+    color:#e64052;
+    font-size:1.55rem;
+    filter:drop-shadow(0 0 10px rgba(230,64,82,.38));
+    animation:latidoSolidario 1.8s ease-in-out infinite;
+}
+
+#eventos .eventos-teleton-lista{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:22px;
+    max-width:1050px;
+    margin:0 auto;
+}
+
+#eventos .evento-card.evento-teleton{
+    display:flex;
+    align-items:stretch;
+    gap:0;
+    min-width:0;
+    overflow:hidden;
+    border:1px solid rgba(212,160,23,.55);
+    border-left:4px solid #b51f32;
+    border-radius:14px;
+    background:linear-gradient(125deg,rgba(30,20,18,.97),rgba(5,5,5,.97));
+    box-shadow:0 8px 24px rgba(0,0,0,.3);
+    transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+
+#eventos .evento-card.evento-teleton:hover{
+    transform:translateY(-4px);
+    border-color:#e5bd55;
+    box-shadow:0 12px 28px rgba(181,31,50,.17),0 0 18px rgba(212,160,23,.12);
+}
+
+#eventos .evento-fecha-solidaria{
+    flex:0 0 100px;
+    min-width:100px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:3px;
+    padding:18px 10px;
+    background:linear-gradient(160deg,#b51f32,#781525);
+    border:0;
+    border-radius:0;
+    color:#fff;
+}
+
+#eventos .evento-fecha-solidaria .dia{
+    color:#fff;
+    font-size:2.3rem;
+    font-weight:800;
+    line-height:1.1;
+    text-shadow:none;
+    animation:none;
+}
+
+#eventos .evento-fecha-solidaria .mes{
+    color:#ffe4a0;
+    font-size:.85rem;
+    font-weight:800;
+    letter-spacing:2px;
+    animation:none;
+}
+
+#eventos .evento-teleton .evento-info{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    gap:7px;
+    min-width:0;
+    padding:22px 24px;
+}
+
+.evento-tipo-solidario{
+    color:#f3cf72;
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:1.5px;
+}
+
+#eventos .evento-teleton .evento-info h3{
+    margin:0;
+    color:#fff;
+    font-size:1.25rem;
+    line-height:1.35;
+    animation:none;
+}
+
+#eventos .evento-teleton .evento-info p{
+    margin:0;
+    color:#e9e2de;
+    font-size:.9rem;
+    line-height:1.55;
+    animation:none;
+}
+
+#eventos .evento-teleton .evento-info .evento-lugar{
+    color:#f3cf72;
+}
+
+#eventos .evento-teleton .evento-info .evento-dia{
+    color:#fff;
+    font-size:.82rem;
+    opacity:.88;
+}
+
+#eventos .evento-teleton .evento-info .evento-frase{
+    margin-top:3px;
+    color:#f4b7bd;
+    font-size:.82rem;
+    font-style:italic;
+}
+
+.eventos-solidarios-cierre{
+    max-width:800px;
+    margin:42px auto 0;
+    text-align:center;
+    color:#f2d17a;
+}
+
+.eventos-solidarios-cierre > i{
+    margin-bottom:12px;
+    font-size:1.8rem;
+    color:#e64052;
+}
+
+.eventos-solidarios-cierre p{
+    margin-bottom:9px;
+    font-size:1.15rem;
+}
+
+.eventos-solidarios-cierre span{
+    color:#fff;
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+@keyframes latidoSolidario{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.13);}
+}
+
+@media(max-width:700px){
+    #eventos.eventos-solidarios{padding:68px 16px 55px;}
+    #eventos .eventos-teleton-lista{grid-template-columns:1fr;gap:16px;}
+    #eventos .evento-fecha-solidaria{flex-basis:82px;min-width:82px;padding:14px 8px;}
+    #eventos .evento-fecha-solidaria .dia{font-size:2rem;}
+    #eventos .evento-teleton .evento-info{padding:18px 15px;}
+    #eventos .evento-teleton .evento-info h3{font-size:1.08rem;}
+    .eventos-solidarios-cabecera > p{font-size:.93rem;}
+}
+
+@media(prefers-reduced-motion:reduce){
+    .eventos-corazon{animation:none;}
+    #eventos .evento-card.evento-teleton{transition:none;}
+}
