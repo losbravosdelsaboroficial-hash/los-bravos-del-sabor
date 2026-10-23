@@ -1949,3 +1949,14 @@ animation: parpadeoSuspendido 0.8s infinite;
     .eventos-corazon{animation:none;}
     #eventos .evento-card.evento-teleton{transition:none;}
 }
+
+
+/* Título en dos líneas para el especial solidario */
+#eventos .eventos-solidarios-cabecera h2.eventos-subtitulo-teleton{
+    margin:0 0 12px;
+    color:#fff;
+    font-size:clamp(1.35rem,3.2vw,2.15rem);
+    letter-spacing:2px;
+    text-shadow:0 0 14px rgba(181,31,50,.35);
+    animation:none;
+}
